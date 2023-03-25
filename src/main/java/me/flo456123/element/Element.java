@@ -33,7 +33,7 @@ public abstract class Element {
 
     protected static void setAtomicNumber(byte number) {
         if (number < 1 || number > 118) {
-            throw new RuntimeException("invalid atomic number");
+            throw new ElementException("invalid atomic number - atomic number has to be in the range of 1-122");
         }
 
         atomicNumber = number;
@@ -45,7 +45,7 @@ public abstract class Element {
 
     protected static void setElementSymbol(String symbol) {
         if (symbol.length() > 2) {
-            throw new RuntimeException("invalid element symbol");
+            throw new ElementException("invalid element symbol - element symbol cannot be longer than two characters");
         }
 
         elementSymbol = symbol;
