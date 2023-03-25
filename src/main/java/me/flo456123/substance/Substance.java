@@ -12,13 +12,12 @@ public class Substance {
      * Substance stores a reactant along with its mass, unit, and moles
      * @param n number of moles
      * @param r the reactant of the substance
-     * @param mass the amount of the substance
      * @param unit what unit the substance is
      */
-    public Substance(double n, Reactant r, double mass, Unit unit) {
+    public Substance(double n, Reactant r, Unit unit) {
         setnMoles(n);
         setReactant(r);
-        setMass(mass);
+        setMass();
         setUnit(unit);
     }
 
@@ -46,12 +45,11 @@ public class Substance {
         return mass;
     }
 
-    private void setMass(double mass) {
-        if (mass < 0) {
-            throw new SubstanceException("invalid mass - mass cannot be negative");
-        }
-
-        this.mass = mass;
+    private void setMass() {
+        // the conversion factor method gives me the atomic mass
+        // of the element, so i can use it here even though it
+        // doesnt make sense
+        mass = getReactant().getConversionFactor(Unit.GRAMS);
     }
 
     public Unit getUnit() {
