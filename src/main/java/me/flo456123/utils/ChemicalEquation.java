@@ -9,9 +9,9 @@ public class ChemicalEquation {
     private List<Substance> products;
 
     public ChemicalEquation(String equation) {
-        String[] equationSides = equation.split("->");
-        String[] reactantStrings = equationSides[0].split("\\+");
-        String[] productStrings = equationSides[1].split("\\+");
+        String[] equationSides = equation.split(" -> ");
+        String[] reactantStrings = equationSides[0].split(" \\+ ");
+        String[] productStrings = equationSides[1].split(" \\+ ");
 
         for (String reactantString : reactantStrings) {
             reactants.add(Parser.parseSubstanceString(reactantString));
