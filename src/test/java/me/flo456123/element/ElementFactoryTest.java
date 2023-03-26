@@ -4,8 +4,7 @@ import me.flo456123.element.elements.Chlorine;
 import me.flo456123.element.elements.Sodium;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.*;
 
 public class ElementFactoryTest {
 
