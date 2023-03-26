@@ -1,7 +1,6 @@
 package me.flo456123.utils;
 
 import me.flo456123.reactant.Reactant;
-import me.flo456123.substance.Substance;
 
 import java.util.List;
 
