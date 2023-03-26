@@ -65,13 +65,15 @@ public abstract class Element {
 
     @Override
     public String toString() {
-        return new StringBuilder(getElementType() + " ")
+        return new StringBuilder("Atomic number: ")
                 .append(getAtomicNumber())
-                .append(" ")
+                .append("\tElement symbol: ")
                 .append(getElementSymbol())
-                .append(" ")
+                .append("\tAtomic mass: ")
                 .append(getAtomicMass())
-                .append(" ")
+                .append("\tElement type: ")
+                .append(getElementType())
+                .append("\tAtoms: ")
                 .append(getAtoms())
                 .toString();
     }
