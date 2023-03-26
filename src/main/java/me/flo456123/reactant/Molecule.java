@@ -1,4 +1,4 @@
-package me.flo456123.substance.reactants;
+package me.flo456123.reactant;
 
 import me.flo456123.element.Element;
 
