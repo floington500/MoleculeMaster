@@ -9,7 +9,7 @@ public class Oxygen extends Element {
         setElementType(ElementType.COVALENT);
         setElementSymbol("O");
         setAtomicMass(16.00);
-        setAtomicNumber((byte) 7);
+        setAtomicNumber((byte) 8);
     }
 
     public Oxygen(int atoms) {
