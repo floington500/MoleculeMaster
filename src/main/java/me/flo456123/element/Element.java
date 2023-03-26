@@ -61,16 +61,14 @@ public abstract class Element {
 
     @Override
     public String toString() {
-        return new StringBuilder(getElementSymbol() + " ")
-                .append(getAtoms())
-                .append(" ")
-                .append(getAtomicMass())
-                .append(" ")
-                .append(getElementType())
-                .append(" ")
+        return new StringBuilder(getElementType() + " ")
                 .append(getAtomicNumber())
                 .append(" ")
+                .append(getElementSymbol())
+                .append(" ")
                 .append(getAtomicMass())
+                .append(" ")
+                .append(getAtoms())
                 .toString();
     }
 
