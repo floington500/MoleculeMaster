@@ -2,9 +2,10 @@ package me.flo456123.utils;
 
 import me.flo456123.element.Element;
 import me.flo456123.element.ElementFactory;
+import me.flo456123.reactant.Reactant;
+import me.flo456123.reactant.ReactantException;
 import me.flo456123.reactant.reactants.Compound;
 import me.flo456123.reactant.reactants.Molecule;
-import me.flo456123.reactant.Reactant;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -12,35 +13,34 @@ import java.util.stream.Stream;
 public class Parser {
     /**
      * parses a given substance string and returns a substance
-     * @param substanceString the substance string to parse
+     * @param reactantString the substance string to parse
      * @return the substance object
      */
-    public static Reactant parseSubstanceString(String substanceString) {
-        if (substanceString.isEmpty()) {
-            throw new IllegalArgumentException("substance string cannot be empty");
+    public static Reactant parseSubstanceString(String reactantString) {
+        if (reactantString.isEmpty()) {
+            throw new ReactantException("substance string cannot be empty");
         }
 
         int moles = 1;
-        if (Character.isDigit(substanceString.charAt(0))) {
-            moles = Integer.parseInt(substanceString.substring(0, 1));
-            substanceString = substanceString.substring(1);
+        if (Character.isDigit(reactantString.charAt(0))) {
+            moles = Integer.parseInt(reactantString.substring(0, 1));
+            reactantString = reactantString.substring(1);
         }
 
-        if (isCompound(substanceString)) {
-            String[] elements = splitCompound(substanceString);
+        if (isCompound(reactantString)) {
+            String[] elements = splitCompound(reactantString);
             List<Element> elements1 = Stream.of(elements)
                     .map(element -> {
                         String elementString = element.split("_")[0];
                         int atoms = parseAtoms(element);
                         return ElementFactory.createElement(elementString, atoms);
-                    })
-                    .toList();
+                    }).toList();
 
             return new Compound(moles, elements1.get(0), elements1.get(1));
         }
         else {
-            String elementString = substanceString.split("_")[0];
-            int atoms = parseAtoms(substanceString);
+            String elementString = reactantString.split("_")[0];
+            int atoms = parseAtoms(reactantString);
             Element element = ElementFactory.createElement(elementString, atoms);
             return new Molecule(moles, element);
         }
@@ -70,7 +70,7 @@ public class Parser {
      * @param s the element or compound string
      * @return the number of atoms
      */
-    private static int parseAtoms(String s) {
+    public static int parseAtoms(String s) {
         try {
             return Integer.parseInt(s.substring(s.length() - 1));
         } catch (NumberFormatException e) {

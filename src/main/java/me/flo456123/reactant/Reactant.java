@@ -3,6 +3,7 @@ package me.flo456123.reactant;
 import me.flo456123.element.Element;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 abstract public class Reactant
 {
@@ -48,6 +49,21 @@ abstract public class Reactant
                     .mapToDouble(element -> element.getAtoms() * element.getAtomicMass())
                     .sum();
         };
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Moles: ")
+                .append(nMoles)
+                .append("\n")
+                .append("Element data: ")
+                .append("\n");
+
+        Stream.of(elements)
+                .forEach(element -> sb.append(element)
+                        .append("\n"));
+
+        return sb.toString();
     }
 
 }

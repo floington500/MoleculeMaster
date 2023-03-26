@@ -6,11 +6,7 @@ import me.flo456123.element.ElementType;
 public class Hydrogen extends Element {
 
     public Hydrogen(int atoms) {
-        super(atoms);
-        setElementType(ElementType.IONIC);
-        setElementSymbol("H");
-        setAtomicMass(1.01);
-        setAtomicNumber((byte) 1);
+        super(ElementType.IONIC, (byte) 1, "H", 1.01, atoms);
     }
 
 }

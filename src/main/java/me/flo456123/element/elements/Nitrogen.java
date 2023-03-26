@@ -6,11 +6,7 @@ import me.flo456123.element.ElementType;
 public class Nitrogen extends Element {
 
     public Nitrogen(int atoms) {
-        super(atoms);
-        setElementType(ElementType.COVALENT);
-        setElementSymbol("N");
-        setAtomicMass(14.01);
-        setAtomicNumber((byte) 7);
+        super(ElementType.COVALENT, (byte) 7, "N", 14.01, atoms);
     }
 
 }

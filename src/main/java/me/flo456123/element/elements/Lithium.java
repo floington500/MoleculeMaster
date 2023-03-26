@@ -6,11 +6,7 @@ import me.flo456123.element.ElementType;
 public class Lithium extends Element {
 
     public Lithium(int atoms) {
-        super(atoms);
-        setElementType(ElementType.IONIC);
-        setElementSymbol("Li");
-        setAtomicMass(6.94);
-        setAtomicNumber((byte) 3);
+        super(ElementType.IONIC, (byte) 3, "Li", 6.94, atoms);
     }
 
 }

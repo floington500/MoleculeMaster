@@ -1,14 +1,18 @@
 package me.flo456123.element;
 
 public abstract class Element {
-    private static ElementType elementType;
-    private static byte        atomicNumber;
-    private static String      elementSymbol;
-    private static double      atomicMass;
+    private ElementType elementType;
+    private byte        atomicNumber;
+    private String      elementSymbol;
+    private double      atomicMass;
     private int         atoms;
 
-    public Element(int atoms) {
-        this.setAtoms(atoms);
+    public Element(ElementType type, byte atomicNumber, String symbol, double mass, int atoms) {
+        setElementType(type);
+        setAtomicNumber(atomicNumber);
+        setElementSymbol(symbol);
+        setAtomicMass(mass);
+        setAtoms(atoms);
     }
 
     public int getAtoms() {

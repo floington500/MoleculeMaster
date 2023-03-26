@@ -6,11 +6,7 @@ import me.flo456123.element.Element;
 public class Aluminum extends Element {
 
     public Aluminum(int atoms) {
-        super(atoms);
-        setElementType(ElementType.IONIC);
-        setElementSymbol("Al");
-        setAtomicMass(26.98);
-        setAtomicNumber((byte) 13);
+        super(ElementType.IONIC, (byte) 13, "Al", 26.98, atoms);
     }
 
 }

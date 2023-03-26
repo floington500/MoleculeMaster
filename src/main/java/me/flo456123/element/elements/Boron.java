@@ -6,11 +6,7 @@ import me.flo456123.element.ElementType;
 public class Boron extends Element {
 
     public Boron(int atoms) {
-        super(atoms);
-        setElementType(ElementType.COVALENT);
-        setElementSymbol("B");
-        setAtomicMass(10.81);
-        setAtomicNumber((byte) 5);
+        super(ElementType.COVALENT, (byte) 5, "B", 10.81, atoms);
     }
 
 }

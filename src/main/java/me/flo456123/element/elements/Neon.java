@@ -6,11 +6,7 @@ import me.flo456123.element.ElementType;
 public class Neon extends Element {
 
     public Neon(int atoms) {
-        super(atoms);
-        setElementType(ElementType.COVALENT);
-        setElementSymbol("Ne");
-        setAtomicMass(20.18);
-        setAtomicNumber((byte) 10);
+        super(ElementType.COVALENT, (byte) 10, "Ne", 20.18, atoms);
     }
 
 }
