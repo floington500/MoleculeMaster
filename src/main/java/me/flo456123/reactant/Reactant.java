@@ -27,7 +27,7 @@ abstract public class Reactant
         return nMoles;
     }
 
-    protected void setnMoles(double n) {
+    private void setnMoles(double n) {
         if (nMoles < 0) {
             throw new ReactantException("invalid number of moles - moles cannot be negatives");
         }

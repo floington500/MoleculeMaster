@@ -3,7 +3,6 @@ package me.flo456123.utils;
 import me.flo456123.element.Element;
 import me.flo456123.element.ElementFactory;
 import me.flo456123.reactant.Reactant;
-import me.flo456123.reactant.ReactantException;
 import me.flo456123.reactant.reactants.Compound;
 import me.flo456123.reactant.reactants.Molecule;
 
@@ -18,7 +17,7 @@ public class Parser {
      */
     public static Reactant parseSubstanceString(String reactantString) {
         if (reactantString.isEmpty()) {
-            throw new ReactantException("substance string cannot be empty");
+            throw new UtilException("substance string cannot be empty");
         }
 
         int moles = 1;
@@ -61,7 +60,7 @@ public class Parser {
      * @param s the compound string to split
      * @return the array of element strings
      */
-    public static String[] splitCompound(String s) {
+    private static String[] splitCompound(String s) {
         return s.split("(?=[A-Z])");
     }
 
