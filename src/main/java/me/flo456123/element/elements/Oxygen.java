@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Oxygen extends Element {
 
-    static {
+    public Oxygen(int atoms) {
+        super(atoms);
         setElementType(ElementType.COVALENT);
         setElementSymbol("O");
         setAtomicMass(16.00);
         setAtomicNumber((byte) 8);
-    }
-
-    public Oxygen(int atoms) {
-        super(atoms);
     }
 
 }

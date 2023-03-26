@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Sodium extends Element {
 
-    static {
+    public Sodium(int atoms) {
+        super(atoms);
         setElementType(ElementType.IONIC);
         setElementSymbol("Na");
         setAtomicMass(22.99);
         setAtomicNumber((byte) 11);
-    }
-
-    public Sodium(int atoms) {
-        super(atoms);
     }
 
 }

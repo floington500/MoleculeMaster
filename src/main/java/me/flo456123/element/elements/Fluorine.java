@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Fluorine extends Element {
 
-    static {
+    public Fluorine(int atoms) {
+        super(atoms);
         setElementType(ElementType.COVALENT);
         setElementSymbol("F");
         setAtomicMass(19.00);
         setAtomicNumber((byte) 9);
-    }
-
-    public Fluorine(int atoms) {
-        super(atoms);
     }
 
 }

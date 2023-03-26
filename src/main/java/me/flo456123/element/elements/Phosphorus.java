@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Phosphorus extends Element {
 
-    static {
+    public Phosphorus(int atoms) {
+        super(atoms);
         setElementType(ElementType.COVALENT);
         setElementSymbol("P");
         setAtomicMass(30.97);
         setAtomicNumber((byte) 15);
-    }
-
-    public Phosphorus(int atoms) {
-        super(atoms);
     }
 
 }

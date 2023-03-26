@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Silicon extends Element {
 
-    static {
+    public Silicon(int atoms) {
+        super(atoms);
         setElementType(ElementType.COVALENT);
         setElementSymbol("Si");
         setAtomicMass(28.09);
         setAtomicNumber((byte) 14);
-    }
-
-    public Silicon(int atoms) {
-        super(atoms);
     }
 
 }

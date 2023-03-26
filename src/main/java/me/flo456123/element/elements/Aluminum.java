@@ -5,15 +5,12 @@ import me.flo456123.element.Element;
 
 public class Aluminum extends Element {
 
-    static {
+    public Aluminum(int atoms) {
+        super(atoms);
         setElementType(ElementType.IONIC);
         setElementSymbol("Al");
         setAtomicMass(26.98);
         setAtomicNumber((byte) 13);
-    }
-
-    public Aluminum(int atoms) {
-        super(atoms);
     }
 
 }

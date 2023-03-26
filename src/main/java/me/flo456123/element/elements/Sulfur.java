@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Sulfur extends Element {
 
-    static {
+    public Sulfur(int atoms) {
+        super(atoms);
         setElementType(ElementType.COVALENT);
         setElementSymbol("S");
         setAtomicMass(32.07);
         setAtomicNumber((byte) 16);
-    }
-
-    public Sulfur(int atoms) {
-        super(atoms);
     }
 
 }

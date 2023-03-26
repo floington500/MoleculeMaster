@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Beryllium extends Element {
 
-    static {
+    public Beryllium(int atoms) {
+        super(atoms);
         setElementType(ElementType.IONIC);
         setElementSymbol("Be");
         setAtomicMass(9.01);
         setAtomicNumber((byte) 4);
-    }
-
-    public Beryllium(int atoms) {
-        super(atoms);
     }
 
 }

@@ -5,7 +5,7 @@ public abstract class Element {
     private static byte        atomicNumber;
     private static String      elementSymbol;
     private static double      atomicMass;
-    private int                atoms;
+    private int         atoms;
 
     public Element(int atoms) {
         this.setAtoms(atoms);
@@ -23,7 +23,7 @@ public abstract class Element {
         return elementType;
     }
 
-    protected static void setElementType(ElementType type) {
+    protected void setElementType(ElementType type) {
         elementType = type;
     }
 
@@ -31,7 +31,7 @@ public abstract class Element {
         return atomicNumber;
     }
 
-    protected static void setAtomicNumber(byte number) {
+    protected void setAtomicNumber(byte number) {
         if (number < 1 || number > 118) {
             throw new ElementException("invalid atomic number - atomic number has to be in the range of 1-122");
         }
@@ -43,7 +43,7 @@ public abstract class Element {
         return elementSymbol;
     }
 
-    protected static void setElementSymbol(String symbol) {
+    protected void setElementSymbol(String symbol) {
         if (symbol.length() > 2) {
             throw new ElementException("invalid element symbol - element symbol cannot be longer than two characters");
         }
@@ -55,7 +55,7 @@ public abstract class Element {
         return atomicMass;
     }
 
-    protected static void setAtomicMass(double mass) {
+    protected void setAtomicMass(double mass) {
         atomicMass = mass;
     }
 

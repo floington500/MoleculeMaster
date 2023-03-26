@@ -5,15 +5,12 @@ import me.flo456123.element.ElementType;
 
 public class Chlorine extends Element {
 
-    static {
+    public Chlorine(int atoms) {
+        super(atoms);
         setElementType(ElementType.COVALENT);
         setElementSymbol("Cl");
         setAtomicMass(35.45);
         setAtomicNumber((byte) 17);
-    }
-
-    public Chlorine(int atoms) {
-        super(atoms);
     }
 
 }
