@@ -1,12 +1,12 @@
 # stoicmd
 
-<p>Welcome to the Stoicmd project, a CLI application that allows you to create your own chemical equations and perform chemistry stoichiometry on them. Although I didn't achieve the initial goal I had set for my project, I made significant progress within the time given.</p>
+<p>Welcome to the Stoicmd project, an application that has a parser for chemical equations along with framework for period 1-3 elements. Although I didn't achieve the initial goal I had set for my project, which was to provide the user with functions to invoke stoichiometry operations on chemical compounds, I made significant progress within the time given.</p>
 
 <p>This project was developed for BH6 and I chose the SPEED theme with the intention of speeding up my chemistry stoichiometry homework. I aimed to create a fully functional chemical equation parser, and I'm excited to share what I've accomplished so far!</p>
 
 ## Installation
 
-<p>To use Stoicmd, simply clone this repository onto your local machine and navigate to the root directory of the project.</p>
+<p>To use Stoicmd, simply clone this repository onto your local machine and navigate to the root directory of the project. From there, you are free to use the program however you see fit.</p>
 
 ```bash
 git clone https://github.com/username/stoicmd.git
@@ -21,13 +21,15 @@ import me.flo456123.substance.Substance;
 import me.flo456123.utils.ChemicalEquation;
 
 public class Main {
-public static void main(String[] args) {
-ChemicalEquation equation = new ChemicalEquation("NaH_2 -> 6O_3Cl_4 + H_2");
+    public static void main(String[] args) {
+        ChemicalEquation equation = new ChemicalEquation("NaH_2 -> 6O_3Cl_4 + H_2");
 
+        System.out.println("Reactants:\n");
         for (Substance s : equation.getReactants()) {
             System.out.println(s);
         }
 
+        System.out.println("Products:\n");
         for (Substance s : equation.getProducts()) {
             System.out.println(s);
         }
@@ -39,10 +41,14 @@ ChemicalEquation equation = new ChemicalEquation("NaH_2 -> 6O_3Cl_4 + H_2");
 <p>When you run the program, you'll get the following output:</p>
 
 ```
+Reactants:
+
 Moles: 1.0
 Element data: 
 Atomic number: 11	Element symbol: Na	Atomic mass: 22.99	Element type: IONIC	Atoms: 1
 Atomic number: 1	Element symbol: H	Atomic mass: 1.01	Element type: IONIC	Atoms: 2
+
+Products:
 
 Moles: 6.0
 Element data: 
@@ -62,4 +68,4 @@ Atomic number: 1	Element symbol: H	Atomic mass: 1.01	Element type: IONIC	Atoms: 
 
 ## Conclusion
 
-<p>I hope you enjoy using Stoicmd as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository. Thank you for hosting the fun event!</p>
+<p>I hope you enjoy using Stoicmd as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository. Thank you to the BH6 staff team for hosting the fun event!</p>
