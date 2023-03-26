@@ -23,6 +23,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>info.picocli</groupId>
+            <artifactId>picocli</artifactId>
+            <version>4.7.1</version>
+        </dependency>
     </dependencies>
 
 </project>
