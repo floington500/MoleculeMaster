@@ -13,7 +13,7 @@ git clone https://github.com/username/stoicmd.git
 cd stoicmd
 ```
 
-### Usage
+## Usage
 <p>Here's an example of how to use the Stoicmd program:</p>
 
 ```java
@@ -38,7 +38,7 @@ ChemicalEquation equation = new ChemicalEquation("NaH_2 -> 6O_3Cl_4 + H_2");
 
 <p>When you run the program, you'll get the following output:</p>
 
-```makefile
+```
 Moles: 1.0
 Element data: 
 Atomic number: 11	Element symbol: Na	Atomic mass: 22.99	Element type: IONIC	Atoms: 1
