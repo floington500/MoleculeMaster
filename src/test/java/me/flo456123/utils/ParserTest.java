@@ -1,6 +1,6 @@
 package me.flo456123.utils;
 
-import me.flo456123.reactant.Reactant;
+import me.flo456123.substance.Substance;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,19 +9,19 @@ public class ParserTest {
 
     @Test
     public void atomsParserTest1() {
-        Reactant reactant = Parser.parseSubstanceString("Na_2");
+        Substance reactant = Parser.parseSubstanceString("Na_2");
         assertEquals(2, reactant.getElements()[0].getAtoms());
     }
 
     @Test
     public void atomsParserTest2() {
-        Reactant reactant = Parser.parseSubstanceString("Na_2Cl_2");
+        Substance reactant = Parser.parseSubstanceString("Na_2Cl_2");
         assertEquals(2, reactant.getElements()[0].getAtoms());
     }
 
     @Test
     public void atomsParserTest3() {
-        Reactant reactant = Parser.parseSubstanceString("Na_2Cl_2");
+        Substance reactant = Parser.parseSubstanceString("Na_2Cl_2");
         assertEquals(2, reactant.getElements()[1].getAtoms());
     }
 
