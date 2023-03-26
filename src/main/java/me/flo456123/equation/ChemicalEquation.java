@@ -1,6 +1,7 @@
-package me.flo456123.utils;
+package me.flo456123.equation;
 
 import me.flo456123.substance.Substance;
+import me.flo456123.utils.Parser;
 
 import java.util.ArrayList;
 import java.util.List;

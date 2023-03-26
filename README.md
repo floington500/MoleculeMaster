@@ -18,7 +18,7 @@ cd stoicmd
 
 ```java
 import me.flo456123.substance.Substance;
-import me.flo456123.utils.ChemicalEquation;
+import me.flo456123.equation.ChemicalEquation;
 
 public class Main {
     public static void main(String[] args) {

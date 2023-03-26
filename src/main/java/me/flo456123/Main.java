@@ -1,12 +1,7 @@
 package me.flo456123;
 
 import me.flo456123.substance.Substance;
-import me.flo456123.utils.ChemicalEquation;
-
-//TODO: for tomorrow
-// make some example run programs
-// possibly if i have enough time, add the stoichiometry section
-// make a writeup of my program
+import me.flo456123.equation.ChemicalEquation;
 
 public class Main {
     public static void main(String[] args) {
