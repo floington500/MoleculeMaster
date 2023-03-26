@@ -1,13 +1,13 @@
 package me.flo456123.utils;
 
-import me.flo456123.reactant.Reactant;
+import me.flo456123.substance.Substance;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChemicalEquation {
-    private final List<Reactant> reactants;
-    private final List<Reactant> products;
+    private final List<Substance> reactants;
+    private final List<Substance> products;
 
     public ChemicalEquation(String equation) {
         reactants = new ArrayList<>();
@@ -27,19 +27,19 @@ public class ChemicalEquation {
 
     }
 
-    public List<Reactant> getReactants() {
+    public List<Substance> getReactants() {
         return reactants;
     }
 
-    private void addReactant(Reactant r) {
+    private void addReactant(Substance r) {
         reactants.add(r);
     }
 
-    public List<Reactant> getProducts() {
+    public List<Substance> getProducts() {
         return products;
     }
 
-    private void addProduct(Reactant r) {
+    private void addProduct(Substance r) {
         products.add(r);
     }
 
