@@ -1,15 +1,26 @@
 package me.flo456123;
 
-import java.util.Random;
+import me.flo456123.substance.Substance;
+import me.flo456123.utils.ChemicalEquation;
+
+//TODO: for tomorrow
+// make some example run programs
+// possibly if i have enough time, add the stoichiometry section
+// make a writeup of my program
 
 public class Main {
     public static void main(String[] args) {
-        int choice = new Random().nextInt(2);
-        if (choice == 0) {
-            System.out.println("Burrito");
+        ChemicalEquation equation = new ChemicalEquation("NaH_2 -> 6O_3Cl_4 + H_2");
+
+        System.out.println("Reactants:\n");
+        for (Substance s : equation.getReactants()) {
+            System.out.println(s);
         }
-        else {
-            System.out.println("Burrito bowl");
+
+        System.out.println("Products:\n");
+        for (Substance s : equation.getProducts()) {
+            System.out.println(s);
         }
+
     }
 }
