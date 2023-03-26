@@ -4,6 +4,10 @@ import me.flo456123.element.elements.*;
 
 public class ElementFactory {
     public static Element createElement(String symbol, int atoms) {
+        if (symbol.length() > 2 || symbol.length() < 1) {
+            throw new ElementException("invalid symbol - element symbol must be two characters");
+        }
+
         return switch (symbol) {
             case "Al" -> new Aluminum(atoms);
             case "Ar" -> new Argon(atoms);
