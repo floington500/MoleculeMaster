@@ -2,10 +2,9 @@ package me.flo456123.utils;
 
 import me.flo456123.element.Element;
 import me.flo456123.element.ElementFactory;
-import me.flo456123.substance.Substance;
-import me.flo456123.substance.Unit;
-import me.flo456123.reactant.Compound;
-import me.flo456123.reactant.Molecule;
+import me.flo456123.reactant.reactants.Compound;
+import me.flo456123.reactant.reactants.Molecule;
+import me.flo456123.reactant.Reactant;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -16,7 +15,7 @@ public class Parser {
      * @param substanceString the substance string to parse
      * @return the substance object
      */
-    public static Substance parseSubstanceString(String substanceString) {
+    public static Reactant parseSubstanceString(String substanceString) {
         if (substanceString.isEmpty()) {
             throw new IllegalArgumentException("substance string cannot be empty");
         }
@@ -37,13 +36,13 @@ public class Parser {
                     })
                     .toList();
 
-            return new Substance(moles, new Compound(elements1.get(0), elements1.get(1)), Unit.GRAMS);
+            return new Compound(moles, elements1.get(0), elements1.get(1));
         }
         else {
             String elementString = substanceString.split("_")[0];
             int atoms = parseAtoms(substanceString);
             Element element = ElementFactory.createElement(elementString, atoms);
-            return new Substance(moles, new Molecule(element), Unit.GRAMS);
+            return new Molecule(moles, element);
         }
 
     }

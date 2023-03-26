@@ -1,16 +1,37 @@
 package me.flo456123.reactant;
 
 import me.flo456123.element.Element;
-import me.flo456123.substance.Unit;
 
 import java.util.Arrays;
 
 abstract public class Reactant
 {
-    protected Element[] elements;
+    private double nMoles;
+    private Element[] elements;
+
+    protected Reactant(double n, Element[] elements) {
+        setElements(elements);
+        setnMoles(n);
+    }
 
     public Element[] getElements() {
         return elements;
+    }
+
+    private void setElements(Element[] elements) {
+        this.elements = elements;
+    }
+
+    public double getnMoles() {
+        return nMoles;
+    }
+
+    protected void setnMoles(double n) {
+        if (nMoles < 0) {
+            throw new ReactantException("invalid number of moles - moles cannot be negatives");
+        }
+
+        nMoles = n;
     }
 
     /**

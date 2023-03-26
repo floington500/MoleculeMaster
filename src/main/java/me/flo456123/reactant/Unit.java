@@ -1,4 +1,4 @@
-package me.flo456123.substance;
+package me.flo456123.reactant;
 
 public enum Unit {
     MOLES,

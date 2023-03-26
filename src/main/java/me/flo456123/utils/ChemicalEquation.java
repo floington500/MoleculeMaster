@@ -1,12 +1,13 @@
 package me.flo456123.utils;
 
+import me.flo456123.reactant.Reactant;
 import me.flo456123.substance.Substance;
 
 import java.util.List;
 
 public class ChemicalEquation {
-    private List<Substance> reactants;
-    private List<Substance> products;
+    private List<Reactant> reactants;
+    private List<Reactant> products;
 
     public ChemicalEquation(String equation) {
         String[] equationSides = equation.split(" -> ");
@@ -14,21 +15,29 @@ public class ChemicalEquation {
         String[] productStrings = equationSides[1].split(" \\+ ");
 
         for (String reactantString : reactantStrings) {
-            reactants.add(Parser.parseSubstanceString(reactantString));
+            addReactant(Parser.parseSubstanceString(reactantString));
         }
 
         for (String productString : productStrings) {
-            products.add(Parser.parseSubstanceString(productString));
+            addProduct(Parser.parseSubstanceString(productString));
         }
 
     }
 
-    public List<Substance> getReactants() {
+    public List<Reactant> getReactants() {
         return reactants;
     }
 
-    public List<Substance> getProducts() {
+    private void addReactant(Reactant r) {
+        reactants.add(r);
+    }
+
+    public List<Reactant> getProducts() {
         return products;
+    }
+
+    private void addProduct(Reactant r) {
+        products.add(r);
     }
 
 }
