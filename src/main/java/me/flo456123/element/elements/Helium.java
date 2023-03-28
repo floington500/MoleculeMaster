@@ -6,7 +6,7 @@ import me.flo456123.element.ElementType;
 public class Helium extends Element {
 
     public Helium(int atoms) {
-        super(ElementType.COVALENT, (byte) 2, "He", 4.00, atoms);
+        super(4.00, (byte) 2, atoms, ElementType.COVALENT, "He");
     }
 
 }

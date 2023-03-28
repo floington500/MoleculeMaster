@@ -6,7 +6,7 @@ import me.flo456123.element.ElementType;
 public class Chlorine extends Element {
 
     public Chlorine(int atoms) {
-        super(ElementType.COVALENT, (byte) 17, "Cl", 35.45, atoms);
+        super(35.45, (byte) 17, atoms, ElementType.COVALENT, "Cl");
     }
 
 }

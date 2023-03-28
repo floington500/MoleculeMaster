@@ -6,7 +6,7 @@ import me.flo456123.element.ElementType;
 public class Sodium extends Element {
 
     public Sodium(int atoms) {
-        super(ElementType.IONIC, (byte) 11, "Na", 22.99, atoms);
+        super(22.99, (byte) 11, atoms, ElementType.IONIC, "Na");
     }
 
 }

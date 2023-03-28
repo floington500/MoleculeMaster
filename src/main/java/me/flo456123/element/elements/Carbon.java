@@ -6,7 +6,7 @@ import me.flo456123.element.ElementType;
 public class Carbon extends Element {
 
     public Carbon(int atoms) {
-        super(ElementType.COVALENT, (byte) 6, "C", 12.01, atoms);
+        super(12.01, (byte) 6, atoms, ElementType.COVALENT, "C");
     }
 
 }

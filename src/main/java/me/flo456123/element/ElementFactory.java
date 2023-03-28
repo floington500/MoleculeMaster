@@ -9,24 +9,24 @@ public class ElementFactory {
         }
 
         return switch (symbol) {
-            case "Al" -> new Aluminum(atoms);
-            case "Ar" -> new Argon(atoms);
-            case "Be" -> new Beryllium(atoms);
-            case "B" -> new Boron(atoms);
-            case "C" -> new Carbon(atoms);
-            case "Cl" -> new Chlorine(atoms);
-            case "F" -> new Fluorine(atoms);
-            case "He" -> new Helium(atoms);
-            case "H" -> new Hydrogen(atoms);
-            case "Li" -> new Lithium(atoms);
-            case "Mg" -> new Magnesium(atoms);
-            case "Ne" -> new Neon(atoms);
-            case "N" -> new Nitrogen(atoms);
-            case "O" -> new Oxygen(atoms);
-            case "P" -> new Phosphorus(atoms);
-            case "Si" -> new Silicon(atoms);
-            case "Na" -> new Sodium(atoms);
-            case "S" -> new Sulfur(atoms);
+            case "Al" -> new Aluminum();
+            case "Ar" -> new Argon();
+            case "Be" -> new Beryllium();
+            case "B" -> new Boron();
+            case "C" -> new Carbon();
+            case "Cl" -> new Chlorine();
+            case "F" -> new Fluorine();
+            case "He" -> new Helium();
+            case "H" -> new Hydrogen();
+            case "Li" -> new Lithium();
+            case "Mg" -> new Magnesium();
+            case "Ne" -> new Neon();
+            case "N" -> new Nitrogen();
+            case "O" -> new Oxygen();
+            case "P" -> new Phosphorus();
+            case "Si" -> new Silicon();
+            case "Na" -> new Sodium();
+            case "S" -> new Sulfur();
             default -> throw new ElementException("invalid element symbol");
         };
     }

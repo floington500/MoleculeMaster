@@ -6,7 +6,7 @@ import me.flo456123.element.ElementType;
 public class Oxygen extends Element {
 
     public Oxygen(int atoms) {
-        super(ElementType.COVALENT, (byte) 8, "O", 16.00, atoms);
+        super(16.00, (byte) 8, atoms, ElementType.COVALENT, "O");
     }
 
 }

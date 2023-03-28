@@ -6,7 +6,7 @@ import me.flo456123.element.ElementType;
 public class Boron extends Element {
 
     public Boron(int atoms) {
-        super(ElementType.COVALENT, (byte) 5, "B", 10.81, atoms);
+        super(10.81, (byte) 5, atoms, ElementType.COVALENT, "B");
     }
 
 }

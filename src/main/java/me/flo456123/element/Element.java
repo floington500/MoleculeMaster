@@ -1,41 +1,35 @@
 package me.flo456123.element;
 
+import me.flo456123.substance.SubstanceException;
+
 public abstract class Element {
-    private ElementType elementType;
-    private byte        atomicNumber;
-    private String      elementSymbol;
     private double      atomicMass;
     private int         atoms;
+    private byte        atomicNumber;
+    private ElementType elementType;
+    private String      elementSymbol;
 
-    public Element(ElementType type, byte atomicNumber, String symbol, double mass, int atoms) {
-        setElementType(type);
+    public Element(double atomicMass, byte atomicNumber, int atoms, ElementType elementType, String elementSymbol) {
+        setAtomicMass(atomicMass);
         setAtomicNumber(atomicNumber);
-        setElementSymbol(symbol);
-        setAtomicMass(mass);
         setAtoms(atoms);
+        setElementType(elementType);
+        setElementSymbol(elementSymbol);
     }
 
-    public int getAtoms() {
-        return atoms;
+    public double getAtomicMass() {
+        return atomicMass;
     }
 
-    protected void setAtoms(int atoms) {
-        this.atoms = atoms;
-    }
-
-    public ElementType getElementType() {
-        return elementType;
-    }
-
-    protected void setElementType(ElementType type) {
-        elementType = type;
+    private void setAtomicMass(double mass) {
+        atomicMass = mass;
     }
 
     public byte getAtomicNumber() {
         return atomicNumber;
     }
 
-    protected void setAtomicNumber(byte number) {
+    private void setAtomicNumber(byte number) {
         if (number < 1 || number > 118) {
             throw new ElementException("invalid atomic number - atomic number has to be in the range of 1-122");
         }
@@ -43,24 +37,36 @@ public abstract class Element {
         atomicNumber = number;
     }
 
+    public int getAtoms() {
+        return atoms;
+    }
+
+    private void setAtoms(int atoms) {
+        if (atoms < 1) {
+            throw new SubstanceException("atoms cannot be less than 1");
+        }
+
+        this.atoms = atoms;
+    }
+
+    public ElementType getElementType() {
+        return elementType;
+    }
+
+    private void setElementType(ElementType type) {
+        elementType = type;
+    }
+
     public String getElementSymbol() {
         return elementSymbol;
     }
 
-    protected void setElementSymbol(String symbol) {
+    private void setElementSymbol(String symbol) {
         if (symbol.length() > 2) {
             throw new ElementException("invalid element symbol - element symbol cannot be longer than two characters");
         }
 
         elementSymbol = symbol;
-    }
-
-    public double getAtomicMass() {
-        return atomicMass;
-    }
-
-    protected void setAtomicMass(double mass) {
-        atomicMass = mass;
     }
 
     @Override
@@ -73,8 +79,6 @@ public abstract class Element {
                 .append(getAtomicMass())
                 .append("\tElement type: ")
                 .append(getElementType())
-                .append("\tAtoms: ")
-                .append(getAtoms())
                 .toString();
     }
 
