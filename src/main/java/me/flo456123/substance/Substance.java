@@ -7,12 +7,17 @@ import java.util.stream.Stream;
 
 abstract public class Substance
 {
-    private double nMoles;
+    private double n;
     private Element[] elements;
 
+    /**
+     * Stores a substance along with its number of moles
+     * @param n number of moles
+     * @param elements elements of the substance
+     */
     protected Substance(double n, Element[] elements) {
         setElements(elements);
-        setnMoles(n);
+        setN(n);
     }
 
     public Element[] getElements() {
@@ -23,16 +28,16 @@ abstract public class Substance
         this.elements = elements;
     }
 
-    public double getnMoles() {
-        return nMoles;
+    public double getN() {
+        return n;
     }
 
-    private void setnMoles(double n) {
-        if (nMoles < 0) {
-            throw new SubstanceException("invalid number of moles - moles cannot be negatives");
+    private void setN(double n) {
+        if (this.n < 0) {
+            throw new SubstanceException("moles cannot be negative");
         }
 
-        nMoles = n;
+        this.n = n;
     }
 
     /**
@@ -54,7 +59,7 @@ abstract public class Substance
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Moles: ")
-                .append(nMoles)
+                .append(n)
                 .append("\n")
                 .append("Element data: ")
                 .append("\n");

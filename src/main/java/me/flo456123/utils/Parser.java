@@ -11,9 +11,10 @@ import java.util.stream.Stream;
 
 public class Parser {
     /**
-     * parses a given substance string and returns a substance
-     * @param substanceString the substance string to parse
-     * @return the substance object
+     * Parses a given substance string
+     * @param substanceString the substance string to parse, must follow
+     *                        the principles of the interpreter
+     * @return the substance object of the parsed string
      */
     public static Substance parseSubstanceString(String substanceString) {
         if (substanceString.isEmpty()) {

@@ -9,6 +9,14 @@ public abstract class Element {
     private ElementType elementType;
     private String      elementSymbol;
 
+    /**
+     * Constructor for an element - all parameters will be passed in by default except for atoms
+     * @param atomicMass the grams/mole of the element
+     * @param atomicNumber atomic number of the element
+     * @param atoms the number of atoms in the element
+     * @param elementType if element is ionic or covalent
+     * @param elementSymbol symbol associated with the element
+     */
     public Element(double atomicMass, byte atomicNumber, int atoms, ElementType elementType, String elementSymbol) {
         setAtomicMass(atomicMass);
         setAtomicNumber(atomicNumber);
@@ -79,6 +87,8 @@ public abstract class Element {
                 .append(getAtomicMass())
                 .append("\tElement type: ")
                 .append(getElementType())
+                .append("\tAtoms: ")
+                .append(getAtoms())
                 .toString();
     }
 

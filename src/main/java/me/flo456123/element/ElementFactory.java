@@ -3,30 +3,36 @@ package me.flo456123.element;
 import me.flo456123.element.elements.*;
 
 public class ElementFactory {
+    /**
+     * Generate a new element to be created
+     * @param symbol pass in the symbol that associates with the element
+     * @param atoms number of atoms that the element will be created with
+     * @return a fresh new atom of your specified desire
+     */
     public static Element createElement(String symbol, int atoms) {
         if (symbol.length() > 2 || symbol.length() < 1) {
             throw new ElementException("invalid symbol - element symbol must be two characters");
         }
 
         return switch (symbol) {
-            case "Al" -> new Aluminum();
-            case "Ar" -> new Argon();
-            case "Be" -> new Beryllium();
-            case "B" -> new Boron();
-            case "C" -> new Carbon();
-            case "Cl" -> new Chlorine();
-            case "F" -> new Fluorine();
-            case "He" -> new Helium();
-            case "H" -> new Hydrogen();
-            case "Li" -> new Lithium();
-            case "Mg" -> new Magnesium();
-            case "Ne" -> new Neon();
-            case "N" -> new Nitrogen();
-            case "O" -> new Oxygen();
-            case "P" -> new Phosphorus();
-            case "Si" -> new Silicon();
-            case "Na" -> new Sodium();
-            case "S" -> new Sulfur();
+            case "Al" -> new Aluminum(atoms);
+            case "Ar" -> new Argon(atoms);
+            case "Be" -> new Beryllium(atoms);
+            case "B" -> new Boron(atoms);
+            case "C" -> new Carbon(atoms);
+            case "Cl" -> new Chlorine(atoms);
+            case "F" -> new Fluorine(atoms);
+            case "He" -> new Helium(atoms);
+            case "H" -> new Hydrogen(atoms);
+            case "Li" -> new Lithium(atoms);
+            case "Mg" -> new Magnesium(atoms);
+            case "Ne" -> new Neon(atoms);
+            case "N" -> new Nitrogen(atoms);
+            case "O" -> new Oxygen(atoms);
+            case "P" -> new Phosphorus(atoms);
+            case "Si" -> new Silicon(atoms);
+            case "Na" -> new Sodium(atoms);
+            case "S" -> new Sulfur(atoms);
             default -> throw new ElementException("invalid element symbol");
         };
     }
