@@ -1,7 +1,6 @@
 package me.flo456123.utils;
 
 import me.flo456123.substance.Substance;
-import me.flo456123.substance.Unit;
 
 public class Solution {
     private double amount;

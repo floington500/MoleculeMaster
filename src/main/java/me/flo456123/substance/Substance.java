@@ -1,6 +1,7 @@
 package me.flo456123.substance;
 
 import me.flo456123.element.Element;
+import me.flo456123.utils.Unit;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
