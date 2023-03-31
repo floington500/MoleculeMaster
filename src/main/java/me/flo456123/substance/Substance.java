@@ -1,50 +1,37 @@
 package me.flo456123.substance;
 
-import me.flo456123.element.Element;
-import me.flo456123.utils.Unit;
+import me.flo456123.element.ElementInstance;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
 
 abstract public class Substance
 {
-    private double n;
-    private Element[] elements;
+    private final double n;
+    private final ElementInstance[] elements;
 
     /**
      * Stores a substance along with its number of moles
      * @param n number of moles
      * @param elements elements of the substance
      */
-    protected Substance(double n, Element[] elements) {
-        setElements(elements);
-        setN(n);
-    }
-
-    public Element[] getElements() {
-        return elements;
-    }
-
-    private void setElements(Element[] elements) {
+    protected Substance(double n, ElementInstance[] elements) {
+        this.n = n;
         this.elements = elements;
+    }
+
+    public ElementInstance[] getElements() {
+        return elements;
     }
 
     public double getN() {
         return n;
     }
 
-    private void setN(double n) {
-        if (this.n < 0) {
-            throw new SubstanceException("moles cannot be negative");
-        }
-
-        this.n = n;
-    }
-
     /**
-     * Pass in the unit to get the conversion factor for
-     * @param unit what unit you want to get the conversion factor for
-     * @return conversion factor of the Compound
+     * Get conversion factor
+     * @param unit the unit to get the conversion factor for
+     * @return the conversion factor that can be used to cancel out a unit
      */
     public double getConversionFactor(Unit unit) {
         return switch (unit) {

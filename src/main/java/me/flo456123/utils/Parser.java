@@ -1,7 +1,7 @@
 package me.flo456123.utils;
 
-import me.flo456123.element.Element;
 import me.flo456123.element.ElementFactory;
+import me.flo456123.element.ElementInstance;
 import me.flo456123.substance.Substance;
 import me.flo456123.substance.substances.Compound;
 import me.flo456123.substance.substances.Molecule;
@@ -17,11 +17,8 @@ public class Parser {
      * @return the substance object of the parsed string
      */
     public static Substance parseSubstanceString(String substanceString) {
-        if (substanceString.isEmpty()) {
-            throw new UtilException("invalid reactant string - reactant string cannot be empty");
-        }
-
         int moles = 1;
+
         if (Character.isDigit(substanceString.charAt(0))) {
             moles = Integer.parseInt(substanceString.substring(0, 1));
             substanceString = substanceString.substring(1);
@@ -29,7 +26,7 @@ public class Parser {
 
         if (isCompound(substanceString)) {
             String[] elements = splitCompound(substanceString);
-            List<Element> elements1 = Stream.of(elements)
+            List<ElementInstance> elements1 = Stream.of(elements)
                     .map(element -> {
                         String elementString = element.split("_")[0];
                         int atoms = parseAtoms(element);
@@ -41,7 +38,7 @@ public class Parser {
         else {
             String elementString = substanceString.split("_")[0];
             int atoms = parseAtoms(substanceString);
-            Element element = ElementFactory.createElement(elementString, atoms);
+            ElementInstance element = ElementFactory.createElement(elementString, atoms);
             return new Molecule(moles, element);
         }
 
