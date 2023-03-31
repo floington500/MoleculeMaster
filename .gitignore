@@ -3,9 +3,6 @@
 *.iml
 *.iws
 
-# Resources
-/src/main/resources
-
 # Maven
 log/
 target/
