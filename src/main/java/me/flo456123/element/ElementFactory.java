@@ -1,39 +1,50 @@
 package me.flo456123.element;
 
-import me.flo456123.element.elements.*;
+import me.flo456123.config.Config;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ElementFactory {
+    private final static Map<String, Element> elements = new HashMap<>();
+
+    static {
+        try {
+            List<Map<String, Object>> obj = Config.loadElementConfig();
+
+            for (Map<String, Object> config : obj) {
+                String symbol = (String) config.get("symbol");
+                String name = (String) config.get("name");
+                double atomicMass = (Double) config.get("atomicMass");
+                int atomicNumber = (Integer) config.get("atomicNumber");
+                ElementType elementType = ElementType.valueOf((String) config.get("elementType"));
+
+                elements.put(symbol, new Element(symbol, name, atomicNumber, atomicMass, elementType));
+            }
+        } catch (IOException e) {
+            System.out.println("Failed to load config: " + e);
+        }
+    }
+
     /**
      * Generate a new element to be created
      * @param symbol pass in the symbol that associates with the element
      * @param atoms number of atoms that the element will be created with
      * @return a fresh new atom of your specified desire
      */
-    public static Element createElement(String symbol, int atoms) {
+    public static ElementInstance createElement(String symbol, int atoms) {
         if (symbol.length() > 2 || symbol.length() < 1) {
-            throw new ElementException("invalid symbol - element symbol must be two characters");
+            throw new ElementException("invalid symbol - element symbol must be one or two characters");
         }
 
-        return switch (symbol) {
-            case "Al" -> new Aluminum(atoms);
-            case "Ar" -> new Argon(atoms);
-            case "Be" -> new Beryllium(atoms);
-            case "B" -> new Boron(atoms);
-            case "C" -> new Carbon(atoms);
-            case "Cl" -> new Chlorine(atoms);
-            case "F" -> new Fluorine(atoms);
-            case "He" -> new Helium(atoms);
-            case "H" -> new Hydrogen(atoms);
-            case "Li" -> new Lithium(atoms);
-            case "Mg" -> new Magnesium(atoms);
-            case "Ne" -> new Neon(atoms);
-            case "N" -> new Nitrogen(atoms);
-            case "O" -> new Oxygen(atoms);
-            case "P" -> new Phosphorus(atoms);
-            case "Si" -> new Silicon(atoms);
-            case "Na" -> new Sodium(atoms);
-            case "S" -> new Sulfur(atoms);
-            default -> throw new ElementException("invalid element symbol");
-        };
+        Element element = elements.get(symbol);
+        if (element == null) {
+            throw new ElementException("element with symbol " + symbol + " does not exist");
+        }
+
+        return new ElementInstance(element, atoms);
     }
+
 }
