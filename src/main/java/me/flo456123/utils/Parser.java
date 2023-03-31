@@ -6,8 +6,8 @@ import me.flo456123.substance.Substance;
 import me.flo456123.substance.substances.Compound;
 import me.flo456123.substance.substances.Molecule;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Parser {
     /**
@@ -26,12 +26,13 @@ public class Parser {
 
         if (isCompound(substanceString)) {
             String[] elements = splitCompound(substanceString);
-            List<ElementInstance> elements1 = Stream.of(elements)
-                    .map(element -> {
-                        String elementString = element.split("_")[0];
-                        int atoms = parseAtoms(element);
-                        return ElementFactory.createElement(elementString, atoms);
-                    }).toList();
+            List<ElementInstance> elements1 = new ArrayList<>();
+
+            for (String element : elements) {
+                String elementString = element.split("_")[0];
+                int atoms = parseAtoms(element);
+                elements1.add(ElementFactory.createElement(elementString, atoms));
+            }
 
             return new Compound(moles, elements1.get(0), elements1.get(1));
         }
@@ -59,7 +60,18 @@ public class Parser {
      * @return the array of element strings
      */
     private static String[] splitCompound(String s) {
-        return s.split("(?=[A-Z])");
+        List<String> elements = new ArrayList<>();
+        int startIndex = 0;
+
+        for (int i = 1; i < s.length(); i++) {
+            if (Character.isUpperCase(s.charAt(i))) {
+                elements.add(s.substring(startIndex, i));
+                startIndex = i;
+            }
+        }
+
+        elements.add(s.substring(startIndex));
+        return elements.toArray(new String[0]);
     }
 
     /**
@@ -69,8 +81,7 @@ public class Parser {
      */
     public static int parseAtoms(String s) {
         try {
-            int underscoreIndex = s.indexOf("_") + 1;
-            return Integer.parseInt(s.substring(underscoreIndex));
+            return Integer.parseInt(s.substring(s.lastIndexOf("_")));
         } catch (NumberFormatException e) {
             return 1;
         }
