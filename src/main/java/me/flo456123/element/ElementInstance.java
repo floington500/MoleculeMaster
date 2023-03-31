@@ -12,6 +12,25 @@ public class ElementInstance extends Element {
         return atoms;
     }
 
+    /**
+     * Equals method used for testing
+     * @param obj object to test
+     * @return if objects are equal
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        ElementInstance element = (ElementInstance) obj;
+
+        return atoms == element.getAtoms() &&
+                super.equals(obj);
+     }
+
     @Override
     public String toString() {
         return new StringBuilder(super.toString())

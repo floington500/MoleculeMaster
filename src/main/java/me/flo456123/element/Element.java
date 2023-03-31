@@ -43,6 +43,28 @@ public class Element {
         return symbol;
     }
 
+    /**
+     * Equals method used for testing
+     * @param obj object to test
+     * @return if objects are equal
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Element element = (Element) obj;
+
+        return symbol.equals(element.getSymbol()) &&
+                name.equals(element.getName()) &&
+                atomicNumber == element.getAtomicNumber() &&
+                atomicMass == element.getAtomicMass() &&
+                elementType.equals(element.getElementType());
+    }
+
     @Override
     public String toString() {
         return new StringBuilder("Atomic number: ")
