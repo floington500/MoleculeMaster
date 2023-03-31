@@ -3,7 +3,7 @@ package me.flo456123.utils;
 import me.flo456123.substance.Substance;
 import me.flo456123.substance.Unit;
 
-public class Solution {
+public class SubstanceAmount {
     private final double amount;
     private final Substance substance;
     private final Unit unit;
@@ -14,7 +14,7 @@ public class Solution {
      * @param substance the substance which is being stored
      * @param unit the unit that the amount is in
      */
-    public Solution(double amount, Substance substance, Unit unit) {
+    public SubstanceAmount(double amount, Substance substance, Unit unit) {
         this.amount = amount;
         this.substance = substance;
         this.unit = unit;
