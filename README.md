@@ -1,8 +1,6 @@
 # stoicmd
 
-<p>Welcome to the Stoicmd project, an application that has a parser for chemical equations along with framework for period 1-3 elements. Although I didn't achieve the initial goal I had set for my project, which was to provide the user with functions to invoke stoichiometry operations on chemical compounds, I made significant progress within the time given.</p>
-
-<p>This project was developed for BH6 and I chose the SPEED theme with the intention of speeding up my chemistry stoichiometry homework. I aimed to create a fully functional chemical equation parser, and I'm excited to share what I've accomplished so far!</p>
+<p>Welcome to the Stoicmd project, an application that has a parser for chemical equations along with framework for period 1-3 elements.</p>
 
 ## Installation
 
@@ -68,4 +66,4 @@ Atomic number: 1	Element symbol: H	Atomic mass: 1.01	Element type: IONIC	Atoms: 
 
 ## Conclusion
 
-<p>I hope you enjoy using Stoicmd as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository. Thank you to the BH6 staff team for hosting the fun event!</p>
+<p>I hope you enjoy using Stoicmd as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository.</p>
