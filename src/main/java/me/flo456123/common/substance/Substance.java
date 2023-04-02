@@ -45,6 +45,20 @@ abstract public class Substance
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Substance substance = (Substance) obj;
+
+        return n == substance.getN() &&
+                Arrays.equals(elements, substance.getElements());
+    }
+
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Moles: ")
                 .append(n)
