@@ -15,6 +15,12 @@ public class ChemicalEquation {
         products = new ArrayList<>();
 
         String[] equationSides = equation.split(" -> ");
+
+        // Check for invalid equation
+        if (equationSides.length != 2) {
+            throw new EquationException("invalid equation");
+        }
+
         String[] reactantStrings = equationSides[0].split(" \\+ ");
         String[] productStrings = equationSides[1].split(" \\+ ");
 
