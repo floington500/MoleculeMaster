@@ -19,11 +19,11 @@ public class ChemicalEquation {
         String[] productStrings = equationSides[1].split(" \\+ ");
 
         for (String reactantString : reactantStrings) {
-            addReactant(Parser.parseSubstanceString(reactantString));
+            reactants.add(Parser.parseSubstanceString(reactantString));
         }
 
         for (String productString : productStrings) {
-            addProduct(Parser.parseSubstanceString(productString));
+            products.add(Parser.parseSubstanceString(productString));
         }
 
     }
@@ -32,15 +32,7 @@ public class ChemicalEquation {
         return reactants;
     }
 
-    private void addReactant(Substance r) {
-        reactants.add(r);
-    }
-
     public List<Substance> getProducts() {
         return products;
-    }
-
-    private void addProduct(Substance r) {
-        products.add(r);
     }
 }
