@@ -1,4 +1,4 @@
-package me.flo456123.element;
+package me.flo456123.common.element;
 
 public class Element {
     private final String symbol;
@@ -77,5 +77,4 @@ public class Element {
                 .append(getElementType())
                 .toString();
     }
-
 }

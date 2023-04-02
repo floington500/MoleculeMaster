@@ -1,6 +1,6 @@
-package me.flo456123.substance;
+package me.flo456123.common.substance;
 
-import me.flo456123.element.ElementInstance;
+import me.flo456123.common.element.ElementInstance;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
@@ -58,5 +58,4 @@ abstract public class Substance
 
         return sb.toString();
     }
-
 }

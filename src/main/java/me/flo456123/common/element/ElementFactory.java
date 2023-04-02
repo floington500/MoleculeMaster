@@ -1,4 +1,4 @@
-package me.flo456123.element;
+package me.flo456123.common.element;
 
 import me.flo456123.config.Config;
 
@@ -46,5 +46,4 @@ public class ElementFactory {
 
         return new ElementInstance(element, atoms);
     }
-
 }

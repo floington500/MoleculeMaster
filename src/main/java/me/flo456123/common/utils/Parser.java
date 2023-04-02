@@ -1,10 +1,10 @@
-package me.flo456123.utils;
+package me.flo456123.common.utils;
 
-import me.flo456123.element.ElementFactory;
-import me.flo456123.element.ElementInstance;
-import me.flo456123.substance.Substance;
-import me.flo456123.substance.substances.Compound;
-import me.flo456123.substance.substances.Molecule;
+import me.flo456123.common.element.ElementFactory;
+import me.flo456123.common.element.ElementInstance;
+import me.flo456123.common.substance.Substance;
+import me.flo456123.common.substance.substances.Compound;
+import me.flo456123.common.substance.substances.Molecule;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,5 +86,4 @@ public class Parser {
             return 1;
         }
     }
-
 }

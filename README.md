@@ -15,8 +15,8 @@ cd stoicmd
 <p>Here's an example of how to use the Stoicmd program:</p>
 
 ```java
-import me.flo456123.substance.Substance;
-import me.flo456123.equation.ChemicalEquation;
+import me.flo456123.common.substance.Substance;
+import me.flo456123.common.equation.ChemicalEquation;
 
 public class Main {
     public static void main(String[] args) {

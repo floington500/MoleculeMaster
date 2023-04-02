@@ -1,7 +1,7 @@
-package me.flo456123.utils;
+package me.flo456123.common.utils;
 
-import me.flo456123.substance.Substance;
-import me.flo456123.substance.Unit;
+import me.flo456123.common.substance.Substance;
+import me.flo456123.common.substance.Unit;
 
 public class SubstanceAmount {
     private final double amount;

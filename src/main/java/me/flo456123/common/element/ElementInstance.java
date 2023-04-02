@@ -1,4 +1,4 @@
-package me.flo456123.element;
+package me.flo456123.common.element;
 
 public class ElementInstance extends Element {
     private final int atoms;

@@ -1,7 +1,7 @@
-package me.flo456123.substance.substances;
+package me.flo456123.common.substance.substances;
 
-import me.flo456123.element.ElementInstance;
-import me.flo456123.substance.Substance;
+import me.flo456123.common.element.ElementInstance;
+import me.flo456123.common.substance.Substance;
 
 public class Molecule extends Substance {
 

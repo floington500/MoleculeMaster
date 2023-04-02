@@ -1,7 +1,7 @@
-package me.flo456123.equation;
+package me.flo456123.common.equation;
 
-import me.flo456123.substance.Substance;
-import me.flo456123.utils.Parser;
+import me.flo456123.common.substance.Substance;
+import me.flo456123.common.utils.Parser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,5 +43,4 @@ public class ChemicalEquation {
     private void addProduct(Substance r) {
         products.add(r);
     }
-
 }
