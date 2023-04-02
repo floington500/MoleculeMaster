@@ -81,7 +81,7 @@ public class Parser {
      */
     public static int parseAtoms(String s) {
         try {
-            return Integer.parseInt(s.substring(s.lastIndexOf("_")));
+            return Integer.parseInt(s.substring(s.indexOf("_")+1));
         } catch (NumberFormatException e) {
             return 1;
         }
