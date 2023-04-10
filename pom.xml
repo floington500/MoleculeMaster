@@ -6,7 +6,7 @@
 
     <groupId>me.flo456123</groupId>
     <artifactId>stoicmd</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
@@ -21,12 +21,6 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>info.picocli</groupId>
-            <artifactId>picocli</artifactId>
-            <version>4.7.1</version>
         </dependency>
 
         <dependency>

@@ -1,4 +1,4 @@
-package me.flo456123.config;
+package me.flo456123.snakeyaml.config;
 
 import org.yaml.snakeyaml.Yaml;
 

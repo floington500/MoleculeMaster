@@ -1,6 +1,6 @@
 package me.flo456123.common.element;
 
-import me.flo456123.config.Config;
+import me.flo456123.snakeyaml.config.Config;
 
 import java.io.IOException;
 import java.util.HashMap;
