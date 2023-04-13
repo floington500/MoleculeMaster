@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ElementFactory {
-    private final static Map<String, Element> elements = new HashMap<>();
+    private final static Map<String, ElementData> elements = new HashMap<>();
 
     static {
         try {
@@ -21,7 +21,7 @@ public class ElementFactory {
                 int atomicNumber = (Integer) config.get("atomicNumber");
                 ElementType elementType = ElementType.valueOf((String) config.get("elementType"));
 
-                elements.put(symbol, new Element(symbol, name, atomicNumber, atomicMass, elementType));
+                elements.put(symbol, new ElementData(symbol, name, atomicNumber, atomicMass, elementType));
             }
         } catch (IOException e) {
             System.out.println("Failed to load config: " + e);
@@ -29,21 +29,21 @@ public class ElementFactory {
     }
 
     /**
-     * Generate a new element to be created
+     * Generate a new {@link Element} to be created
      * @param symbol pass in the symbol that associates with the element
      * @param atoms number of atoms that the element will be created with
      * @return a fresh new atom of your specified desire
      */
-    public static ElementInstance createElement(String symbol, int atoms) {
+    public static Element createElement(String symbol, int atoms) {
         if (symbol.length() > 2 || symbol.length() < 1) {
             throw new ElementException("invalid symbol - element symbol must be one or two characters");
         }
 
-        Element element = elements.get(symbol);
-        if (element == null) {
+        ElementData data = elements.get(symbol);
+        if (data == null) {
             throw new ElementException("element with symbol " + symbol + " does not exist");
         }
 
-        return new ElementInstance(element, atoms);
+        return new Element(data, atoms);
     }
 }

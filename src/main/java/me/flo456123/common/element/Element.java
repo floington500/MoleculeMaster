@@ -1,46 +1,25 @@
 package me.flo456123.common.element;
 
 public class Element {
-    private final String symbol;
-    private final String name;
-    private final int atomicNumber;
-    private final double atomicMass;
-    private final ElementType elementType;
+    private final int atoms;
+    public final ElementData data;
 
-    public Element(String symbol, String name, int atomicNumber, double atomicMass, ElementType elementType) {
-        if (atomicNumber < 1 || atomicNumber > 118) {
-            throw new ElementException("invalid atomic number - atomic number has to be in the range of 1-122");
-        }
-
-        if (symbol.length() > 2) {
-            throw new ElementException("invalid element symbol - element symbol cannot be longer than two characters");
-        }
-
-        this.symbol = symbol;
-        this.name = name;
-        this.atomicNumber = atomicNumber;
-        this.atomicMass = atomicMass;
-        this.elementType = elementType;
+    public Element(ElementData data, int atoms) {
+        this.atoms = atoms;
+        this.data = data;
     }
 
-    public double getAtomicMass() {
-        return atomicMass;
+    public int getAtoms() {
+        return atoms;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAtomicNumber() {
-        return atomicNumber;
-    }
-
-    public ElementType getElementType() {
-        return elementType;
-    }
-
-    public String getSymbol() {
-        return symbol;
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + atoms;
+        result = prime * result + ((data == null) ? 0 : data.hashCode());
+        return result;
     }
 
     /**
@@ -56,25 +35,15 @@ public class Element {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Element element = (Element) obj;
+        Element other = (Element) obj;
 
-        return symbol.equals(element.getSymbol()) &&
-                name.equals(element.getName()) &&
-                atomicNumber == element.getAtomicNumber() &&
-                atomicMass == element.getAtomicMass() &&
-                elementType.equals(element.getElementType());
-    }
+        return hashCode() == other.hashCode();
+     }
 
     @Override
     public String toString() {
-        return new StringBuilder("Atomic number: ")
-                .append(getAtomicNumber())
-                .append("\tElement symbol: ")
-                .append(getSymbol())
-                .append("\tAtomic mass: ")
-                .append(getAtomicMass())
-                .append("\tElement type: ")
-                .append(getElementType())
-                .toString();
+        return super.toString() +
+                "\tAtoms:" +
+                atoms;
     }
 }
