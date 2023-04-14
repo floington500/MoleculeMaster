@@ -3,42 +3,14 @@ package me.flo456123.common.element;
 /**
  * The Element class represents an element in the periodic table.
  * It contains the number of atoms of the element and its ElementData object.
+ *
+ * @param data  the data of the element
+ * @param atoms the number of atoms of the element
  */
-public class Element {
-    private final int atoms;
-    public final ElementData data;
-
-    /**
-     * Constructor that sets the number of atoms and the element data.
-     *
-     * @param data the data of the element
-     * @param atoms the number of atoms of the element
-     */
-    public Element(ElementData data, int atoms) {
-        this.atoms = atoms;
-        this.data = data;
-    }
-
-    public int getAtoms() {
-        return atoms;
-    }
-
-    /**
-     * Returns the hash code for this Substance object.
-     *
-     * @return an int representing the hash code for this Substance object
-     */
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + atoms;
-        result = prime * result + ((data == null) ? 0 : data.hashCode());
-        return result;
-    }
-
+public record Element(ElementData data, int atoms) {
     /**
      * Equals method used for testing
+     *
      * @param obj object to test
      * @return if objects are equal
      */
@@ -53,7 +25,7 @@ public class Element {
         Element other = (Element) obj;
 
         return hashCode() == other.hashCode();
-     }
+    }
 
     /**
      * Returns a string representation of this {@link Element} object.

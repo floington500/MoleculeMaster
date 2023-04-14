@@ -44,7 +44,7 @@ abstract public class Substance
             case MOLES -> 1;
             case LITERS -> 22.4;
             case GRAMS -> Arrays.stream(getElements())
-                    .mapToDouble(element -> element.getAtoms() * element.data.atomicMass())
+                    .mapToDouble(element -> element.atoms() * element.data().atomicMass())
                     .sum();
         };
     }
