@@ -1,26 +1,30 @@
 package me.flo456123.common.substance;
 
-import me.flo456123.common.element.ElementInstance;
+import me.flo456123.common.element.Element;
 
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+/**
+ * This abstract class represents a substance with a given number of moles and elements.
+ */
 abstract public class Substance
 {
     private final double n;
-    private final ElementInstance[] elements;
+    private final Element[] elements;
 
     /**
-     * Stores a substance along with its number of moles
-     * @param n number of moles
-     * @param elements elements of the substance
+     * Constructs a new {@link Substance} object with the given number of moles and elements.
+     *
+     * @param n        the number of moles
+     * @param elements the elements of the substance
      */
-    protected Substance(double n, ElementInstance[] elements) {
+    protected Substance(double n, Element[] elements) {
         this.n = n;
         this.elements = elements;
     }
 
-    public ElementInstance[] getElements() {
+    public Element[] getElements() {
         return elements;
     }
 
@@ -29,9 +33,10 @@ abstract public class Substance
     }
 
     /**
-     * Get conversion factor
-     * @param unit the unit to get the conversion factor for
-     * @return the conversion factor that can be used to cancel out a unit
+     * Returns the conversion factor for the given unit.
+     *
+     * @param unit the {@link Unit} for which to retrieve the conversion factor
+     * @return a double representing the conversion factor for the given unit
      */
     public double getConversionFactor(Unit unit) {
         return switch (unit) {
@@ -39,11 +44,31 @@ abstract public class Substance
             case MOLES -> 1;
             case LITERS -> 22.4;
             case GRAMS -> Arrays.stream(getElements())
-                    .mapToDouble(element -> element.getAtoms() * element.getAtomicMass())
+                    .mapToDouble(element -> element.getAtoms() * element.data.atomicMass())
                     .sum();
         };
     }
 
+    /**
+     * Returns the hash code for this Substance object.
+     *
+     * @return an int representing the hash code for this Substance object
+     */
+    @Override
+    public int hashCode() {
+        int result = 17;
+        long nBits = Double.doubleToLongBits(n);
+        result = 31 * result + (int) (nBits ^ (nBits >>> 32));
+        result = 31 * result + Arrays.hashCode(elements);
+        return result;
+    }
+
+    /**
+     * Returns true if this {@link Substance} object is equal to the specified object.
+     *
+     * @param obj the object to compare this Substance object against
+     * @return true if this Substance object is equal to the specified object, false otherwise
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -52,18 +77,22 @@ abstract public class Substance
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Substance substance = (Substance) obj;
+        Substance other = (Substance) obj;
 
-        return n == substance.getN() &&
-                Arrays.equals(elements, substance.getElements());
+        return hashCode() == other.hashCode();
     }
 
+    /**
+     * Returns a string representation of this Substance object.
+     *
+     * @return a string representation of this Substance object
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Moles: ")
                 .append(n)
                 .append("\n")
-                .append("Element data: ")
+                .append("ElementData data: ")
                 .append("\n");
 
         Stream.of(elements)
