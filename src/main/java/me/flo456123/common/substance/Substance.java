@@ -67,7 +67,7 @@ abstract public class Substance
      * Returns true if this {@link Substance} object is equal to the specified object.
      *
      * @param obj the object to compare this Substance object against
-     * @return true if this Substance object is equal to the specified object, false otherwise
+     * @return true if this {@link Substance} object is equal to the specified object, false otherwise
      */
     @Override
     public boolean equals(Object obj) {
@@ -83,9 +83,9 @@ abstract public class Substance
     }
 
     /**
-     * Returns a string representation of this Substance object.
+     * Returns a string representation of this {@link Substance} object.
      *
-     * @return a string representation of this Substance object
+     * @return a string representation of this {@link Substance} object
      */
     @Override
     public String toString() {

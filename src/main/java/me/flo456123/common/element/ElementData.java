@@ -1,5 +1,8 @@
 package me.flo456123.common.element;
 
+/**
+ * The ElementData class represents data about an element in the periodic table.
+ */
 public record ElementData (
         String symbol,
         String name,
@@ -7,6 +10,11 @@ public record ElementData (
         double atomicMass,
         ElementType elementType) {
 
+    /**
+     * Constructor that validates the atomic number and symbol of the element.
+     *
+     * @throws ElementException if the atomic number is not between 1 and 118, or if the symbol is longer than 2 characters
+     */
     public ElementData {
         if (atomicNumber < 1 || atomicNumber > 118) {
             throw new ElementException("invalid atomic number - atomic number has to be in the range of 1-122");
@@ -18,6 +26,11 @@ public record ElementData (
 
     }
 
+    /**
+     * Returns the hash code for this {@link ElementData} object.
+     *
+     * @return an int representing the hash code for this {@link ElementData} object
+     */
     @Override
     public int hashCode() {
         int result = 17;
@@ -30,6 +43,11 @@ public record ElementData (
         return result;
     }
 
+    /**
+     * Returns a string representation of this {@link ElementData} object.
+     *
+     * @return a string representation of this {@link ElementData} object
+     */
     @Override
     public String toString() {
         return "Atomic number: " +

@@ -7,9 +7,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The ElementFactory class is responsible for creating new instances of {@link Element} by using
+ * the {@link ElementData} and loading data from a YAML config file.
+ */
 public class ElementFactory {
     private final static Map<String, ElementData> elements = new HashMap<>();
 
+    /*
+     * Populates the elements map by loading data from a YAML config file.
+     */
     static {
         try {
             List<Map<String, Object>> obj = Config.loadElementConfig();
