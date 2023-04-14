@@ -1,10 +1,10 @@
-# stoicmd
+# Molecule Master
 
-<p>Welcome to the Stoicmd project, an application that has a parser for chemical equations along with framework for period 1-3 elements.</p>
+Welcome to Molecule Master, a framework designed for easy creation of elements on the periodic table.
 
 ## Installation
 
-<p>To use Stoicmd, simply clone this repository onto your local machine and navigate to the root directory of the project. From there, you are free to use the program however you see fit.</p>
+To use Molecule Master, simply clone this repository onto your local machine and navigate to the root directory of the project. From there, you are free to use the program however you see fit.
 
 ```bash
 git clone https://github.com/username/stoicmd.git
@@ -12,7 +12,7 @@ cd stoicmd
 ```
 
 ## Usage
-<p>Here's an example of how to use the Stoicmd program:</p>
+Here's an example of how to use the Molecule Master framework:
 
 ```java
 import me.flo456123.common.substance.Substance;
@@ -23,20 +23,20 @@ public class Main {
         ChemicalEquation equation = new ChemicalEquation("NaH_2 -> 6O_3Cl_4 + H_2");
 
         System.out.println("Reactants:\n");
-        for (Substance s : equation.getReactants()) {
-            System.out.println(s);
+        for (Substance r : equation.getReactants()) {
+            System.out.println(r);
         }
 
         System.out.println("Products:\n");
-        for (Substance s : equation.getProducts()) {
-            System.out.println(s);
+        for (Substance p : equation.getProducts()) {
+            System.out.println(p);
         }
 
     }
 }
 ```
 
-<p>When you run the program, you'll get the following output:</p>
+When you run the program, you'll get the following output:
 
 ```
 Reactants:
@@ -59,11 +59,10 @@ Atomic number: 1	Element symbol: H	Atomic mass: 1.01	Element type: IONIC	Atoms: 
 ```
 
 ## How it works
-<p>The parser in Stoicmd interprets chemical equations in the following way:</p>
-
-<ul>• The numbers seen before the compounds/molecule represent the number of moles</ul>
-<ul>• The numbers seen after underscores represent the number of atoms of the individual element.</ul>
+The parser in Molecule Master interprets chemical equation strings in the following way:
+- The numbers seen before the compounds/molecule represent the number of moles
+- The numbers seen after underscores represent a subscript for a corresponding substance
 
 ## Conclusion
 
-<p>I hope you enjoy using Stoicmd as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository.</p>
+I hope you enjoy using Molecule Master as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository.
