@@ -1,4 +1,4 @@
-package me.flo456123.config;
+package me.flo456123.snakeyaml.config;
 
 import org.yaml.snakeyaml.Yaml;
 
@@ -14,7 +14,8 @@ public class Config {
 
     public static List<Map<String, Object>> loadElementConfig() throws IOException {
         Yaml yaml = new Yaml();
-        InputStream inputStream = new FileInputStream(new File(CONFIG_FILE_PATH));
-        return yaml.load(inputStream);
+        try (InputStream inputStream = new FileInputStream(CONFIG_FILE_PATH)) {
+            return yaml.load(inputStream);
+        }
     }
 }

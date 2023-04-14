@@ -1,7 +1,7 @@
 package me.flo456123.common.utils;
 
 import me.flo456123.common.element.ElementFactory;
-import me.flo456123.common.element.ElementInstance;
+import me.flo456123.common.element.Element;
 import me.flo456123.common.substance.Substance;
 import me.flo456123.common.substance.substances.Compound;
 import me.flo456123.common.substance.substances.Molecule;
@@ -9,6 +9,9 @@ import me.flo456123.common.substance.substances.Molecule;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Parser class provides functionality to parse a given substance string
+ */
 public class Parser {
     /**
      * Parses a given substance string
@@ -26,7 +29,7 @@ public class Parser {
 
         if (isCompound(substanceString)) {
             String[] elements = splitCompound(substanceString);
-            List<ElementInstance> elements1 = new ArrayList<>();
+            List<Element> elements1 = new ArrayList<>();
 
             for (String element : elements) {
                 String elementString = element.split("_")[0];
@@ -39,7 +42,7 @@ public class Parser {
         else {
             String elementString = substanceString.split("_")[0];
             int atoms = parseAtoms(substanceString);
-            ElementInstance element = ElementFactory.createElement(elementString, atoms);
+            Element element = ElementFactory.createElement(elementString, atoms);
             return new Molecule(moles, element);
         }
 
