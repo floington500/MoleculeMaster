@@ -9,6 +9,17 @@ package me.flo456123.common.element;
  */
 public record Element(ElementData data, int atoms) {
     /**
+     * Returns the hashcode for this {@link Element} object.
+     *
+     * @return an int representing the hash code for this {@link Element} object.
+     */
+    @Override
+    public int hashCode() {
+        int result = data.hashCode();
+        result = 31 * result + atoms;
+        return result;
+    }
+    /**
      * Equals method used for testing
      *
      * @param obj object to test
