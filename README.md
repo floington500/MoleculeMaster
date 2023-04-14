@@ -59,10 +59,10 @@ Atomic number: 1	Element symbol: H	Atomic mass: 1.01	Element type: IONIC	Atoms: 
 ```
 
 ## How it works
-The parser in Stoicmd interprets chemical equation strings in the following way:
+The parser in Molecule Master interprets chemical equation strings in the following way:
 - The numbers seen before the compounds/molecule represent the number of moles
 - The numbers seen after underscores represent a subscript for a corresponding substance
 
 ## Conclusion
 
-I hope you enjoy using Stoicmd as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository.
+I hope you enjoy using Molecule Master as much as I enjoyed building it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository.
