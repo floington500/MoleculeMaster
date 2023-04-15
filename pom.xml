@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.flo456123</groupId>
-    <artifactId>stoicmd</artifactId>
-    <version>1.0.1</version>
+    <artifactId>MoleculeMaster</artifactId>
+    <version>1.2.1</version>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
