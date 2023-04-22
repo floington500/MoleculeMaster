@@ -15,8 +15,8 @@ cd stoicmd
 Here's an example of how to use the Molecule Master framework:
 
 ```java
-import me.flo456123.common.substance.Substance;
-import me.flo456123.common.equation.ChemicalEquation;
+import com.github.flo456123.common.substance.Substance;
+import com.github.flo456123.common.equation.ChemicalEquation;
 
 public class Main {
     public static void main(String[] args) {
