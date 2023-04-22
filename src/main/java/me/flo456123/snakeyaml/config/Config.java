@@ -9,6 +9,9 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class that parses the yaml file containing all the element data.
+ */
 public class Config {
     private static final String CONFIG_FILE_PATH = "./src/main/resources/elements.yaml";
 
