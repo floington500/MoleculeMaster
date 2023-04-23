@@ -31,7 +31,7 @@ public class ElementFactory {
                 elements.put(symbol, new ElementData(symbol, name, atomicNumber, atomicMass, elementType));
             }
         } catch (IOException e) {
-            System.out.println("Failed to load config: " + e);
+            throw new RuntimeException("Failed to load config: " + e);
         }
     }
 
