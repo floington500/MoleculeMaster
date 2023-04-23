@@ -14,7 +14,7 @@ public class ChemicalEquation {
     private final List<Substance> products;
 
     /**
-     * Constructs a new {@link ChemicalEquation} from the given string representation.
+     * Constructs a new {@link ChemicalEquation} from a given string representation.
      * @param equation a string representation of the {@link ChemicalEquation} in the format of "reactants -> products"
      * @throws InvalidEquationException if the equation is invalid or cannot be parsed
      */

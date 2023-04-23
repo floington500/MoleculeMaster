@@ -1,7 +1,7 @@
-package com.github.flo456123.common.substance.substances;
+package com.github.flo456123.common.types.substances;
 
 import com.github.flo456123.common.element.Element;
-import com.github.flo456123.common.substance.Substance;
+import com.github.flo456123.common.types.Substance;
 
 /**
  * Represents a compound substance made up of two elements.

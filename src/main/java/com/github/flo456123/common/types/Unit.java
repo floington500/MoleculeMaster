@@ -1,4 +1,4 @@
-package com.github.flo456123.common.substance;
+package com.github.flo456123.common.types;
 
 public enum Unit {
     MOLES,

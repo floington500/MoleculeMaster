@@ -1,10 +1,10 @@
-package com.github.flo456123.common.utils;
+package com.github.flo456123.common.parser;
 
 import com.github.flo456123.common.element.Element;
 import com.github.flo456123.common.element.ElementFactory;
-import com.github.flo456123.common.substance.Substance;
-import com.github.flo456123.common.substance.substances.Compound;
-import com.github.flo456123.common.substance.substances.Molecule;
+import com.github.flo456123.common.types.Substance;
+import com.github.flo456123.common.types.substances.Compound;
+import com.github.flo456123.common.types.substances.Molecule;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public class Parser {
     }
 
     /**
-     * returns if the given string represents a compound
+     * Returns if the given string represents a compound.
      * @param str the string to check
      * @return true if the string represents a compound
      */
@@ -58,7 +58,7 @@ public class Parser {
     }
 
     /**
-     * splits a compound string into an array of element strings
+     * Splits a given compound string into an array of element strings.
      * @param s the compound string to split
      * @return the array of element strings
      */
@@ -78,7 +78,7 @@ public class Parser {
     }
 
     /**
-     * returns the number of atoms in the given element or compound string
+     * Returns the number of atoms in a given element or compound string.
      * @param s the element or compound string
      * @return the number of atoms
      */
