@@ -1,13 +1,13 @@
 package com.github.flo456123.common.equation;
 
-import com.github.flo456123.common.substance.Substance;
-import com.github.flo456123.common.utils.Parser;
+import com.github.flo456123.common.types.Substance;
+import com.github.flo456123.common.parser.Parser;
 
 import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * Represents a {@link ChemicalEquation} in the form of reactants and products.
+ * Represents a chemical equation in the form of reactants and products.
  */
 public class ChemicalEquation {
     private final List<Substance> reactants;
