@@ -1,8 +1,22 @@
-# Intellij
+# IntelliJ
 .idea/
 *.iml
-*.iws
+out/
 
 # Maven
-log/
 target/
+pom.xml.*
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+*.bak
+*.dat
+*.mdb
