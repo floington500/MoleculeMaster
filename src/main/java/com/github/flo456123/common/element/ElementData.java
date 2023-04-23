@@ -50,13 +50,12 @@ public record ElementData (
      */
     @Override
     public String toString() {
-        return "Atomic number: " +
-                atomicNumber +
-                "\tElementData symbol: " +
-                symbol +
-                "\tAtomic mass: " +
-                atomicMass +
-                "\tElementData type: " +
-                elementType;
+        return "ElementData{" +
+                "symbol='" + symbol + '\'' +
+                ", name='" + name + '\'' +
+                ", atomicNumber=" + atomicNumber +
+                ", atomicMass=" + atomicMass +
+                ", elementType=" + elementType +
+                '}';
     }
 }

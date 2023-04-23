@@ -45,8 +45,9 @@ public record Element(ElementData data, int atoms) {
      */
     @Override
     public String toString() {
-        return data.toString() +
-                "\tAtoms:" +
-                atoms;
+        return "Element{" +
+                "data=" + data +
+                ", atoms=" + atoms +
+                '}';
     }
 }

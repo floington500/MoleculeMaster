@@ -1,9 +1,8 @@
-package com.github.flo456123.common.substance;
+package com.github.flo456123.common.types;
 
 import com.github.flo456123.common.element.Element;
 
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 /**
  * This abstract class represents a substance with a given number of moles and elements.
@@ -89,16 +88,9 @@ abstract public class Substance
      */
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Moles: ")
-                .append(n)
-                .append("\n")
-                .append("ElementData data: ")
-                .append("\n");
-
-        Stream.of(elements)
-                .forEach(element -> sb.append(element)
-                        .append("\n"));
-
-        return sb.toString();
+        return "Substance{" +
+                "n=" + n +
+                ", elements=" + Arrays.toString(elements) +
+                '}';
     }
 }
