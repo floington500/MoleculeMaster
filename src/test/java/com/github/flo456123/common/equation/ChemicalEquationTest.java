@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class ChemicalEquationTest {
 
@@ -115,19 +116,16 @@ public class ChemicalEquationTest {
         assertEquals(equation.getProducts(), products);
     }
 
-    @Test (expected = InvalidEquationException.class)
     public void invalidEquationTest1() {
-        new ChemicalEquation("NaCl_2 ->");
+        assertThrows(InvalidEquationException.class, () -> new ChemicalEquation("NaCl_2 ->"));
     }
 
-    @Test (expected = InvalidEquationException.class)
     public void invalidEquationTest2() {
-        new ChemicalEquation("-> NaCl_2");
+        assertThrows(InvalidEquationException.class, () -> new ChemicalEquation("-> NaCl_2"));
     }
 
-    @Test (expected = InvalidEquationException.class)
     public void invalidEquationTest3() {
-        new ChemicalEquation(" -> ");
+        assertThrows(InvalidEquationException.class, () ->  new ChemicalEquation(" -> "));
     }
 
 }
