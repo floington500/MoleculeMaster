@@ -4,7 +4,7 @@ import com.github.flo456123.common.element.Element;
 import com.github.flo456123.common.types.Substance;
 
 /**
- * Represents a substance consisting of a single element in a molecule form
+ * Represents a molecular substance made up of a single element.
  */
 public class Molecule extends Substance {
     /**
