@@ -3,8 +3,6 @@ package com.github.flo456123.common.parser;
 import com.github.flo456123.common.element.Element;
 import com.github.flo456123.common.element.ElementFactory;
 import com.github.flo456123.common.types.Substance;
-import com.github.flo456123.common.types.substances.Compound;
-import com.github.flo456123.common.types.substances.Molecule;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,13 +35,13 @@ public class Parser {
                 elements1.add(ElementFactory.createElement(elementString, atoms));
             }
 
-            return new Compound(moles, elements1.get(0), elements1.get(1));
+            return new Substance(moles, elements1.get(0), elements1.get(1));
         }
         else {
             String elementString = substanceString.split("_")[0];
             int atoms = parseAtoms(substanceString);
             Element element = ElementFactory.createElement(elementString, atoms);
-            return new Molecule(moles, element);
+            return new Substance(moles, element);
         }
 
     }

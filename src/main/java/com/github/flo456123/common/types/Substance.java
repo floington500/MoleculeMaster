@@ -5,9 +5,9 @@ import com.github.flo456123.common.element.Element;
 import java.util.Arrays;
 
 /**
- * This abstract class represents a substance with a given number of moles and elements.
+ * This class represents a substance with a given number of moles and elements.
  */
-abstract public class Substance
+public class Substance
 {
     private final double n;
     private final Element[] elements;
@@ -18,7 +18,7 @@ abstract public class Substance
      * @param n        the number of moles
      * @param elements the elements of the substance
      */
-    protected Substance(double n, Element[] elements) {
+    public Substance(double n, Element... elements) {
         this.n = n;
         this.elements = elements;
     }
