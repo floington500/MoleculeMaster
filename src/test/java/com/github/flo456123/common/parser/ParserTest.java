@@ -1,8 +1,7 @@
-package com.github.flo456123.common.utils;
+package com.github.flo456123.common.parser;
 
 import com.github.flo456123.common.element.Element;
 import com.github.flo456123.common.element.ElementFactory;
-import com.github.flo456123.common.parser.Parser;
 import com.github.flo456123.common.types.Substance;
 import com.github.flo456123.common.types.substances.Compound;
 import org.junit.Test;
