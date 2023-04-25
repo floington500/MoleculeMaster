@@ -9,33 +9,16 @@ package com.github.flo456123.common.element;
  */
 public record Element(ElementData data, int atoms) {
     /**
-     * Returns the hashcode for this {@link Element} object.
+     * Constructor that validates that there are a valid number of atoms
+     * passed in.
      *
-     * @return an int representing the hash code for this {@link Element} object.
+     * @throws ElementException if the number of atoms are <= 0
      */
-    @Override
-    public int hashCode() {
-        int result = data.hashCode();
-        result = 31 * result + atoms;
-        return result;
-    }
-    /**
-     * Equals method used for testing
-     *
-     * @param obj object to test
-     * @return if objects are equal
-     */
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+    public Element {
+        if (atoms <= 0) {
+            throw new ElementException("number of atoms cannot be <= 0");
         }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        Element other = (Element) obj;
 
-        return hashCode() == other.hashCode();
     }
 
     /**

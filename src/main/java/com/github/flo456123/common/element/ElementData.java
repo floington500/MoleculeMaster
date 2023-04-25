@@ -9,7 +9,6 @@ public record ElementData (
         int atomicNumber,
         double atomicMass,
         ElementType elementType) {
-
     /**
      * Constructor that validates the atomic number and symbol of the element.
      *
@@ -17,30 +16,13 @@ public record ElementData (
      */
     public ElementData {
         if (atomicNumber < 1 || atomicNumber > 118) {
-            throw new ElementException("invalid atomic number - atomic number has to be in the range of 1-122");
+            throw new ElementException("atomic number but be in the range of 1-118");
         }
 
         if (symbol.length() > 2) {
-            throw new ElementException("invalid element symbol - element symbol cannot be longer than two characters");
+            throw new ElementException("element symbol cannot be longer than 2 characters");
         }
 
-    }
-
-    /**
-     * Returns the hash code for this {@link ElementData} object.
-     *
-     * @return an int representing the hash code for this {@link ElementData} object
-     */
-    @Override
-    public int hashCode() {
-        int result = 17;
-        result = 31 * result + symbol.hashCode();
-        result = 31 * result + name.hashCode();
-        result = 31 * result + atomicNumber;
-        long atomicMassBits = Double.doubleToLongBits(atomicMass);
-        result = 31 * result + (int) (atomicMassBits ^ (atomicMassBits >>> 32));
-        result = 31 * result + elementType.hashCode();
-        return result;
     }
 
     /**
