@@ -27,23 +27,14 @@ From there, you are free to use the program however you see fit. Make sure to in
 Here's an example of how to use Molecule Master:
 
 ```java
+import com.github.flo456123.common.parser.Parser;
 import com.github.flo456123.common.types.Substance;
-import com.github.flo456123.common.equation.ChemicalEquation;
 
 public class Main {
     public static void main(String[] args) {
-        ChemicalEquation equation = new ChemicalEquation("NaH_2 -> 6O_3Cl_4 + H_2");
+        Substance substance = Parser.parseSubstanceString("H_2O");
 
-        System.out.println("Reactants:\n");
-        for (Substance r : equation.getReactants()) {
-            System.out.println(r);
-        }
-
-        System.out.println("Products:\n");
-        for (Substance p : equation.getProducts()) {
-            System.out.println(p);
-        }
-
+        System.out.println(substance);
     }
 }
 ```
@@ -51,23 +42,31 @@ public class Main {
 When you run the program, you'll get the following output:
 
 ```
-Reactants:
-
-Moles: 1.0
-Element data: 
-Atomic number: 11	Element symbol: Na	Atomic mass: 22.99	Element type: IONIC	Atoms: 1
-Atomic number: 1	Element symbol: H	Atomic mass: 1.01	Element type: IONIC	Atoms: 2
-
-Products:
-
-Moles: 6.0
-Element data: 
-Atomic number: 8	Element symbol: O	Atomic mass: 16.0	Element type: COVALENT	Atoms: 3
-Atomic number: 17	Element symbol: Cl	Atomic mass: 35.45	Element type: COVALENT	Atoms: 4
-
-Moles: 1.0
-Element data: 
-Atomic number: 1	Element symbol: H	Atomic mass: 1.01	Element type: IONIC	Atoms: 2
+Substance {
+    n = 1.0,
+    elements = [
+        Element {
+            data = ElementData {
+                symbol = 'H',
+                name = 'Hydrogen',
+                atomicNumber = 1,
+                atomicMass = 1.008,
+                elementType = COVALENT
+            },
+            atoms = 2
+        },
+        Element {
+            data = ElementData {
+                symbol = 'O',
+                name = 'Oxygen',
+                atomicNumber = 8,
+                atomicMass = 15.999,
+                elementType = COVALENT
+            },
+            atoms = 1
+        }
+    ]
+}
 ```
 
 ## How it works

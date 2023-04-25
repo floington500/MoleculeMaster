@@ -32,23 +32,6 @@ abstract public class Substance
     }
 
     /**
-     * Returns the conversion factor for the given unit.
-     *
-     * @param unit the {@link Unit} for which to retrieve the conversion factor
-     * @return a double representing the conversion factor for the given unit
-     */
-    public double getConversionFactor(Unit unit) {
-        return switch (unit) {
-            case ATOMS, MOLECULES, PARTICLES -> 6.02 * Math.pow(10, 23);
-            case MOLES -> 1;
-            case LITERS -> 22.4;
-            case GRAMS -> Arrays.stream(getElements())
-                    .mapToDouble(element -> element.atoms() * element.data().atomicMass())
-                    .sum();
-        };
-    }
-
-    /**
      * Returns the hash code for this Substance object.
      *
      * @return an int representing the hash code for this Substance object
