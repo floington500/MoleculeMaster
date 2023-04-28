@@ -42,7 +42,7 @@ public class ElementFactory {
      * @return a fresh new atom of your specified desire
      */
     public static Element createElement(String symbol, int atoms) {
-        if (symbol.length() > 2 || symbol.length() < 1) {
+        if (symbol.length() < 1 || symbol.length() > 2) {
             throw new ElementException("invalid symbol - element symbol must be one or two characters");
         }
 

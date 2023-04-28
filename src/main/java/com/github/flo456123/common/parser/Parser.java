@@ -4,8 +4,8 @@ import com.github.flo456123.common.element.Element;
 import com.github.flo456123.common.element.ElementFactory;
 import com.github.flo456123.common.types.Substance;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * The Parser class provides functionality to parse a given substance string
@@ -20,71 +20,52 @@ public class Parser {
     public static Substance parseSubstanceString(String substanceString) {
         int moles = 1;
 
-        if (Character.isDigit(substanceString.charAt(0))) {
-            moles = Integer.parseInt(substanceString.substring(0, 1));
-            substanceString = substanceString.substring(1);
+        int firstNonDigitIndex = findFirstNonDigitIndex(substanceString);
+        if (firstNonDigitIndex > 0) {
+            moles = Integer.parseInt(substanceString.substring(0, firstNonDigitIndex));
+            substanceString = substanceString.substring(firstNonDigitIndex);
         }
 
-        if (isCompound(substanceString)) {
-            String[] elements = splitCompound(substanceString);
-            List<Element> elements1 = new ArrayList<>();
+        final int numElements = countElements(substanceString);
+        Element[] elements = new Element[numElements];
 
-            for (String element : elements) {
-                String elementString = element.split("_")[0];
-                int atoms = parseAtoms(element);
-                elements1.add(ElementFactory.createElement(elementString, atoms));
-            }
-
-            return new Substance(moles, elements1.get(0), elements1.get(1));
-        }
-        else {
-            String elementString = substanceString.split("_")[0];
-            int atoms = parseAtoms(substanceString);
-            Element element = ElementFactory.createElement(elementString, atoms);
-            return new Substance(moles, element);
+        Pattern elementPattern = Pattern.compile("([A-Z][a-z]*)(?:_(\\d+))?");
+        Matcher matcher = elementPattern.matcher(substanceString);
+        int elementIndex = 0;
+        while (matcher.find()) {
+            String elementString = matcher.group(1);
+            int atoms = matcher.group(2) == null ? 1 : Integer.parseInt(matcher.group(2));
+            elements[elementIndex++] = ElementFactory.createElement(elementString, atoms);
         }
 
+        return new Substance(moles, elements);
     }
 
-    /**
-     * Returns if the given string represents a compound.
-     * @param str the string to check
-     * @return true if the string represents a compound
-     */
-    public static boolean isCompound(String str) {
-        return str.matches("^(?=.*[A-Z].*[A-Z]).+$");
-    }
-
-    /**
-     * Splits a given compound string into an array of element strings.
-     * @param s the compound string to split
-     * @return the array of element strings
-     */
-    private static String[] splitCompound(String s) {
-        List<String> elements = new ArrayList<>();
-        int startIndex = 0;
-
-        for (int i = 1; i < s.length(); i++) {
-            if (Character.isUpperCase(s.charAt(i))) {
-                elements.add(s.substring(startIndex, i));
-                startIndex = i;
+    public static int findFirstNonDigitIndex(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (!Character.isDigit(c)) {
+                return i;
             }
         }
-
-        elements.add(s.substring(startIndex));
-        return elements.toArray(new String[0]);
+        return -1;
     }
 
-    /**
-     * Returns the number of atoms in a given element or compound string.
-     * @param s the element or compound string
-     * @return the number of atoms
-     */
+    public static int countElements(String s) {
+        int count = 0;
+        for (char c : s.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static int parseAtoms(String s) {
-        try {
-            return Integer.parseInt(s.substring(s.indexOf("_")+1));
-        } catch (NumberFormatException e) {
+        int subscriptIndex = s.indexOf('_');
+        if (subscriptIndex == -1) {
             return 1;
         }
+        return Integer.parseInt(s.substring(subscriptIndex + 1));
     }
 }
