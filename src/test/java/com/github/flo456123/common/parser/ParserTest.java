@@ -9,37 +9,115 @@ import static org.junit.Assert.assertEquals;
 
 public class ParserTest {
 
+    // Substance parser test
     @Test
     public void validSubstanceTest1() {
-        Substance test = Parser.parseSubstanceString("2HCl");
+        Substance actual = Parser.parseSubstanceString("2HCl");
 
         Element elementReactant1 = ElementFactory.createElement("H", 1);
         Element elementReactant2 = ElementFactory.createElement("Cl", 1);
         Substance expected = new Substance(2, elementReactant1, elementReactant2);
 
-        assertEquals(test, expected);
+        assertEquals(expected.n(), actual.n());
+        assertEquals(expected.elements(), actual.elements());
     }
 
     @Test
     public void validSubstanceTest2() {
-        Substance test = Parser.parseSubstanceString("2NaCl_2");
+        Substance actual = Parser.parseSubstanceString("2NaCl_2");
 
         Element elementReactant1 = ElementFactory.createElement("Na", 1);
         Element elementReactant2 = ElementFactory.createElement("Cl", 2);
         Substance expected = new Substance(2, elementReactant1, elementReactant2);
 
-        assertEquals(test, expected);
+        assertEquals(expected.n(), actual.n());
+        assertEquals(expected.elements(), actual.elements());
     }
 
     @Test
     public void validSubstanceTest3() {
-        Substance test = Parser.parseSubstanceString("HS_4");
+        Substance actual = Parser.parseSubstanceString("HS_4");
 
         Element elementProduct3 = ElementFactory.createElement("H", 1);
         Element elementProduct4 = ElementFactory.createElement("S", 4);
         Substance expected = new Substance(1, elementProduct3, elementProduct4);
 
-        assertEquals(test, expected);
+        assertEquals(expected.n(), actual.n());
+        assertEquals(expected.elements(), actual.elements());
+    }
+
+    // Count element tests
+    @Test
+    public void countElementTest1() {
+        int expected = 3;
+        String elementString = "HClO_3";
+        int actual = Parser.countElements(elementString);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countElementTest2() {
+        int expected = 2;
+        String elementString = "HCl";
+        int actual = Parser.countElements(elementString);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countElementTest3() {
+        int expected = 2;
+        String elementString = "H_2O";
+        int actual = Parser.countElements(elementString);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countInvalidElementTest1() {
+        int expected = 0;
+        String elementString = "";
+        int actual = Parser.countElements(elementString);
+        assertEquals(expected, actual);
+    }
+
+    // Atom parser test
+    @Test
+    public void parseAtomsTest1() {
+        int expected = 2;
+        String elementString = "H_2";
+        int actual = Parser.parseAtoms(elementString);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void parseAtomsTest2() {
+        int expected = 5;
+        String elementString = "Na_5";
+        int actual = Parser.parseAtoms(elementString);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void parseAtomsTest3() {
+        int expected = 7;
+        String elementString = "Cl_7";
+        int actual = Parser.parseAtoms(elementString);
+        assertEquals(actual, expected);
+    }
+
+    final int notFound = 1;
+
+    @Test
+    public void parseInvalidElementTest1() {
+        String elementString = "Cl";
+        int actual = Parser.parseAtoms(elementString);
+        assertEquals(notFound, actual);
+    }
+
+    @Test
+    public void parseInvalidElementTest2() {
+        String elementString = "Al";
+        int actual = Parser.parseAtoms(elementString);
+        assertEquals(notFound, actual);
     }
 
 }
