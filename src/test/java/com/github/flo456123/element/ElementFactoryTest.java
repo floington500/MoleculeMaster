@@ -61,9 +61,9 @@ public class ElementFactoryTest {
         assertNotEquals(element1, element2);
     }
 
-    @Test (expected = ElementException.class)
+    @Test
     public void invalidStringTest1() {
-        Element element1 = ElementFactory.createElement("abc", 2);
+        assertThrows(ElementException.class, () -> ElementFactory.createElement("abc", 123));
     }
 
 }
