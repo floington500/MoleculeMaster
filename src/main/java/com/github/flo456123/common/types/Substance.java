@@ -5,7 +5,11 @@ import com.github.flo456123.common.element.Element;
 import java.util.Arrays;
 
 /**
- * This class represents a substance with a given number of moles and elements.
+ * The {@link Substance} class represents a chemical substance that consists of a
+ * number of elements and a number of moles.
+ *
+ * @param n the number of moles in the substance
+ * @param elements the elements that make up the substance
  */
 public record Substance(int n, Element... elements) {
     /**

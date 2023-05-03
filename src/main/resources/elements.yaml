@@ -8,19 +8,19 @@
   name: Helium
   atomicNumber: 2
   atomicMass: 4.003
-  elementType: INERT_GAS
+  elementType: COVALENT
 
 - symbol: Li
   name: Lithium
   atomicNumber: 3
   atomicMass: 6.94
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Be
   name: Beryllium
   atomicNumber: 4
   atomicMass: 9.012
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: B
   name: Boron
@@ -56,25 +56,25 @@
   name: Neon
   atomicNumber: 10
   atomicMass: 20.18
-  elementType: INERT_GAS
+  elementType: COVALENT
 
 - symbol: Na
   name: Sodium
   atomicNumber: 11
   atomicMass: 22.99
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Mg
   name: Magnesium
   atomicNumber: 12
   atomicMass: 24.31
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Al
   name: Aluminum
   atomicNumber: 13
   atomicMass: 26.98
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Si
   name: Silicon
@@ -104,19 +104,19 @@
   name: Argon
   atomicNumber: 18
   atomicMass: 39.95
-  elementType: INERT_GAS
+  elementType: COVALENT
 
 - symbol: K
   name: Potassium
   atomicNumber: 19
   atomicMass: 39.09
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ca
   name: Calcium
   atomicNumber: 20
   atomicMass: 40.07
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Sc
   name: Scandium
@@ -128,73 +128,73 @@
   name: Titanium
   atomicNumber: 22
   atomicMass: 47.87
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: V
   name: Vanadium
   atomicNumber: 23
   atomicMass: 50.94
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Cr
   name: Chromium
   atomicNumber: 24
   atomicMass: 52.00
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Mn
   name: Manganese
   atomicNumber: 25
   atomicMass: 54.94
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Fe
   name: Iron
   atomicNumber: 26
   atomicMass: 55.85
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Co
   name: Cobalt
   atomicNumber: 27
   atomicMass: 58.93
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ni
   name: Nickel
   atomicNumber: 28
   atomicMass: 58.69
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Cu
   name: Copper
   atomicNumber: 29
   atomicMass: 63.55
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Zn
   name: Zinc
   atomicNumber: 30
   atomicMass: 65.38
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ga
   name: Gallium
   atomicNumber: 31
   atomicMass: 69.72
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ge
   name: Germanium
   atomicNumber: 32
   atomicMass: 72.63
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: As
   name: Arsenic
   atomicNumber: 33
   atomicMass: 74.92
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Se
   name: Selenium
@@ -218,91 +218,91 @@
   name: Rubidium
   atomicNumber: 37
   atomicMass: 85.47
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Sr
   name: Strontium
   atomicNumber: 38
   atomicMass: 87.62
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Y
   name: Yttrium
   atomicNumber: 39
   atomicMass: 88.91
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Zr
   name: Zirconium
   atomicNumber: 40
   atomicMass: 91.22
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Nb
   name: Niobium
   atomicNumber: 41
   atomicMass: 92.91
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Mo
   name: Molybdenum
   atomicNumber: 42
   atomicMass: 95.94
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Tc
   name: Technetium
   atomicNumber: 43
   atomicMass: 98.00
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ru
   name: Ruthenium
   atomicNumber: 44
   atomicMass: 101.07
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Rh
   name: Rhodium
   atomicNumber: 45
   atomicMass: 102.91
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pd
   name: Palladium
   atomicNumber: 46
   atomicMass: 106.42
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ag
   name: Silver
   atomicNumber: 47
   atomicMass: 107.87
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Cd
   name: Cadmium
   atomicNumber: 48
   atomicMass: 112.41
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: In
   name: Indium
   atomicNumber: 49
   atomicMass: 114.82
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Sn
   name: Tin
   atomicNumber: 50
   atomicMass: 118.71
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Sb
   name: Antimony
   atomicNumber: 51
   atomicMass: 121.76
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Te
   name: Tellurium
@@ -326,193 +326,193 @@
   name: Cesium
   atomicNumber: 55
   atomicMass: 132.91
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ba
   name: Barium
   atomicNumber: 56
   atomicMass: 137.33
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: La
   name: Lanthanum
   atomicNumber: 57
   atomicMass: 138.91
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ce
   name: Cerium
   atomicNumber: 58
   atomicMass: 140.12
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pr
   name: Praseodymium
   atomicNumber: 59
   atomicMass: 140.91
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Nd
   name: Neodymium
   atomicNumber: 60
   atomicMass: 144.24
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pm
   name: Promethium
   atomicNumber: 61
   atomicMass: 145.00
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Sm
   name: Samarium
   atomicNumber: 62
   atomicMass: 150.36
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Eu
   name: Europium
   atomicNumber: 63
   atomicMass: 151.96
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Gd
   name: Gadolinium
   atomicNumber: 64
   atomicMass: 157.25
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Tb
   name: Terbium
   atomicNumber: 65
   atomicMass: 158.93
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Dy
   name: Dysprosium
   atomicNumber: 66
   atomicMass: 162.50
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ho
   name: Holmium
   atomicNumber: 67
   atomicMass: 164.93
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Er
   name: Erbium
   atomicNumber: 68
   atomicMass: 167.26
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Tm
   name: Thulium
   atomicNumber: 69
   atomicMass: 168.93
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Yb
   name: Ytterbium
   atomicNumber: 70
   atomicMass: 173.05
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Lu
   name: Lutetium
   atomicNumber: 71
   atomicMass: 175.00
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Hf
   name: Hafnium
   atomicNumber: 72
   atomicMass: 178.49
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ta
   name: Tantalum
   atomicNumber: 73
   atomicMass: 180.95
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: W
   name: Tungsten
   atomicNumber: 74
   atomicMass: 183.84
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Re
   name: Rhenium
   atomicNumber: 75
   atomicMass: 186.21
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Os
   name: Osmium
   atomicNumber: 76
   atomicMass: 190.23
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ir
   name: Iridium
   atomicNumber: 77
   atomicMass: 192.22
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pt
   name: Platinum
   atomicNumber: 78
   atomicMass: 195.08
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pt
   name: Platinum
   atomicNumber: 78
   atomicMass: 195.08
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Au
   name: Gold
   atomicNumber: 79
   atomicMass: 196.97
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Hg
   name: Mercury
   atomicNumber: 80
   atomicMass: 200.59
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Tl
   name: Thallium
   atomicNumber: 81
   atomicMass: 204.38
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pb
   name: Lead
   atomicNumber: 82
   atomicMass: 207.2
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Bi
   name: Bismuth
   atomicNumber: 83
   atomicMass: 208.98
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Po
   name: Polonium
   atomicNumber: 84
   atomicMass: 209.00
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: At
   name: Astatine
   atomicNumber: 85
   atomicMass: 210.00
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Rn
   name: Radon
@@ -524,136 +524,136 @@
   name: Francium
   atomicNumber: 87
   atomicMass: 223.00
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ra
   name: Radium
   atomicNumber: 88
   atomicMass: 226.03
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Ac
   name: Actinium
   atomicNumber: 89
   atomicMass: 227.03
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Th
   name: Thorium
   atomicNumber: 90
   atomicMass: 232.04
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pa
   name: Protactinium
   atomicNumber: 91
   atomicMass: 231.04
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: U
   name: Uranium
   atomicNumber: 92
   atomicMass: 238.03
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Np
   name: Neptunium
   atomicNumber: 93
   atomicMass: 237.05
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Pu
   name: Plutonium
   atomicNumber: 94
   atomicMass: 244.06
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Am
   name: Americium
   atomicNumber: 95
   atomicMass: 243.06
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Cm
   name: Curium
   atomicNumber: 96
   atomicMass: 247.07
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Bk
   name: Berkelium
   atomicNumber: 97
   atomicMass: 247.07
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Cf
   name: Californium
   atomicNumber: 98
   atomicMass: 251.08
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Es
   name: Einsteinium
   atomicNumber: 99
   atomicMass: 252.08
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Fm
   name: Fermium
   atomicNumber: 100
   atomicMass: 257.10
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Md
   name: Mendelevium
   atomicNumber: 101
   atomicMass: 258.10
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: "No"
   name: Nobelium
   atomicNumber: 102
   atomicMass: 259.10
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Lr
   name: Lawrencium
   atomicNumber: 103
   atomicMass: 262.11
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Rf
   name: Rutherfordium
   atomicNumber: 104
   atomicMass: 261.11
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Db
   name: Dubnium
   atomicNumber: 105
   atomicMass: 262.11
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Sg
   name: Seaborgium
   atomicNumber: 106
   atomicMass: 266.12
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Bh
   name: Bohrium
   atomicNumber: 107
   atomicMass: 264.12
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Hs
   name: Hassium
   atomicNumber: 108
   atomicMass: 267.13
-  elementType: METALLIC
+  elementType: IONIC
 
 - symbol: Mt
   name: Meitnerium
   atomicNumber: 109
   atomicMass: 268.14
-  elementType: METALLIC
+  elementType: IONIC

@@ -1,10 +1,13 @@
 package com.github.flo456123.common.element;
 
+import com.github.flo456123.common.element.exceptions.ElementLoadingException;
+
 /**
- * The Element class represents an element in the periodic table.
- * It contains the number of atoms of the element and its ElementData object.
+ * The Element class represents an element in the
+ * periodic table. It contains the number of atoms
+ * of the element and its {@link ElementData} object.
  *
- * @param data  the data of the element
+ * @param data  the element data of the element
  * @param atoms the number of atoms of the element
  */
 public record Element(ElementData data, int atoms) {
@@ -12,11 +15,11 @@ public record Element(ElementData data, int atoms) {
      * Constructor that validates that there are a valid number of atoms
      * passed in.
      *
-     * @throws ElementException if the number of atoms are <= 0
+     * @throws ElementLoadingException if the number of atoms are <= 0
      */
     public Element {
         if (atoms <= 0) {
-            throw new ElementException("number of atoms cannot be <= 0");
+            throw new ElementLoadingException("number of atoms cannot be <= 0");
         }
 
     }
