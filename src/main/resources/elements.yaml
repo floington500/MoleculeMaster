@@ -8,7 +8,7 @@
   name: Helium
   atomicNumber: 2
   atomicMass: 4.003
-  elementType: INERT_GAS
+  elementType: COVALENT
 
 - symbol: Li
   name: Lithium
@@ -56,7 +56,7 @@
   name: Neon
   atomicNumber: 10
   atomicMass: 20.18
-  elementType: INERT_GAS
+  elementType: COVALENT
 
 - symbol: Na
   name: Sodium
@@ -104,7 +104,7 @@
   name: Argon
   atomicNumber: 18
   atomicMass: 39.95
-  elementType: INERT_GAS
+  elementType: COVALENT
 
 - symbol: K
   name: Potassium
