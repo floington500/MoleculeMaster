@@ -6,7 +6,7 @@
 
     <groupId>com.github.flo456123</groupId>
     <artifactId>molecule-master</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
 
     <distributionManagement>
         <repository>
