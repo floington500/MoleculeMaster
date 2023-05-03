@@ -1,6 +1,7 @@
 package com.github.flo456123.element;
 
 import com.github.flo456123.common.element.*;
+import com.github.flo456123.common.element.exceptions.ElementLoadingException;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -63,7 +64,7 @@ public class ElementFactoryTest {
 
     @Test
     public void invalidStringTest1() {
-        assertThrows(ElementException.class, () -> ElementFactory.createElement("abc", 123));
+        assertThrows(ElementLoadingException.class, () -> ElementFactory.createElement("abc", 123));
     }
 
 }

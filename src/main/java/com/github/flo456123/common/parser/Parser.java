@@ -3,6 +3,7 @@ package com.github.flo456123.common.parser;
 import com.github.flo456123.common.element.Element;
 import com.github.flo456123.common.element.ElementFactory;
 import com.github.flo456123.common.types.Substance;
+import com.github.flo456123.common.element.exceptions.UnsupportedElementException;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,11 +29,14 @@ import java.util.regex.Pattern;
  */
 public class Parser {
     /**
-     * Parses a given substance string
+     * Main function used to parse substance strings into {@link Substance}
+     * objects.
      *
      * @param substanceString the substance string to parse, must follow
      *                        the principles of the interpreter
-     * @return the substance object of the parsed string
+     * @return the {@link Substance} object of the parsed string
+     * @throws UnsupportedElementException if there is a formatting issue
+     * with the given substance string
      */
     public static Substance parseSubstanceString(String substanceString) {
         int moles = 1;
@@ -91,10 +95,11 @@ public class Parser {
     }
 
     /**
-     * Parses an element string for the number of atoms.
+     * Parses the number of atoms in a substance string.
      *
      * @param s the element string to parse
-     * @return the number of atoms in an element string, or 1 if no atoms are specified
+     * @return the number of atoms in an element string,
+     * or 1 if no atoms are specified
      */
     public static int parseAtoms(String s) {
         int subscriptIndex = s.indexOf('_');

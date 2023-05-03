@@ -1,5 +1,6 @@
 package com.github.flo456123.common.element;
 
+import com.github.flo456123.common.element.exceptions.UnsupportedElementException;
 import com.github.flo456123.snakeyaml.config.Config;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class ElementFactory {
     private final static Map<String, ElementData> elements = new HashMap<>();
 
     /*
-     * Populates the elements map by loading data from a YAML config file.
+     * Populates the elements map by loading data from a YAML configuration file.
      */
     static {
         try {
@@ -36,19 +37,22 @@ public class ElementFactory {
     }
 
     /**
-     * Generate a new {@link Element} to be created
-     * @param symbol pass in the symbol that associates with the element
-     * @param atoms number of atoms that the element will be created with
-     * @return a fresh new atom of your specified desire
+     * Creates a new element instance with a given symbol and number of atoms.
+     *
+     * @param symbol the symbol of the element to create
+     * @param atoms  the number of atoms for the element to be created with
+     * @return a new {@link Element} instance
+     * @throws UnsupportedElementException if element symbol is not in range of 1-2,
+     * or if the element symbol is not present in the datafile
      */
     public static Element createElement(String symbol, int atoms) {
         if (symbol.length() < 1 || symbol.length() > 2) {
-            throw new ElementException("invalid symbol - element symbol must be one or two characters");
+            throw new UnsupportedElementException("element symbol must be one or two characters");
         }
 
         ElementData data = elements.get(symbol);
         if (data == null) {
-            throw new ElementException("element with symbol " + symbol + " does not exist");
+            throw new UnsupportedElementException("element with symbol " + symbol + " does not exist");
         }
 
         return new Element(data, atoms);
