@@ -8,11 +8,28 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * The Parser class provides functionality to parse a given substance string
+ * The Parser class provides the base functionality for parsing substance
+ * strings into a {@link Substance} object. A substance string has the
+ * following format:
+ * <p>
+ *     {@code [moles] [element]_[atoms] [element2]_[atoms2]...}
+ * </p>
+ *
+ * <p>
+ *     The integer seen before a substance is interpreted as the number of moles.
+ *     An integer after an underscore is interpreted as the number of atoms for a
+ *     corresponding element. If no number of atoms or moles are specified, they
+ *     will by default be parsed to one.
+ * </p>
+ *
+ * <p>
+ *     Example substance string: {@code 2H_2O}
+ * </p>
  */
 public class Parser {
     /**
      * Parses a given substance string
+     *
      * @param substanceString the substance string to parse, must follow
      *                        the principles of the interpreter
      * @return the substance object of the parsed string
@@ -41,6 +58,12 @@ public class Parser {
         return new Substance(moles, elements);
     }
 
+    /**
+     * Searches for the first non-digit character in a given string.
+     *
+     * @param s the string to search from
+     * @return the index of the first non-digit index, or -1 if nothing is found
+     */
     public static int findFirstNonDigitIndex(String s) {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -51,6 +74,12 @@ public class Parser {
         return -1;
     }
 
+    /**
+     * Counts the number of elements for a given substance string.
+     *
+     * @param s the substance string to count from
+     * @return the number of elements in the substance string
+     */
     public static int countElements(String s) {
         int count = 0;
         for (char c : s.toCharArray()) {
@@ -61,6 +90,12 @@ public class Parser {
         return count;
     }
 
+    /**
+     * Parses an element string for the number of atoms.
+     *
+     * @param s the element string to parse
+     * @return the number of atoms in an element string, or 1 if no atoms are specified
+     */
     public static int parseAtoms(String s) {
         int subscriptIndex = s.indexOf('_');
         if (subscriptIndex == -1) {
