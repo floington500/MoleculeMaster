@@ -31,9 +31,9 @@ public record Element(ElementData data, int atoms) {
      */
     @Override
     public String toString() {
-        return "Element{" +
-                "data=" + data +
-                ", atoms=" + atoms +
-                '}';
+        return "Element {\n" +
+                "    data = " + data.toString().replace("\n", "\n    ") + ",\n" +
+                "    atoms = " + atoms + "\n" +
+                "}";
     }
 }
