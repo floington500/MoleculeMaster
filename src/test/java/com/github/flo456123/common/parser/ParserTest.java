@@ -5,6 +5,7 @@ import com.github.flo456123.common.element.ElementFactory;
 import com.github.flo456123.common.types.Substance;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ParserTest {
@@ -18,7 +19,7 @@ public class ParserTest {
         Substance actual = Parser.parseSubstanceString("2HCl");
 
         assertEquals(expected.n(), actual.n());
-        assertEquals(expected.elements(), actual.elements());
+        assertArrayEquals(expected.elements(), actual.elements());
     }
 
     @Test
@@ -30,7 +31,7 @@ public class ParserTest {
         Substance actual = Parser.parseSubstanceString("2NaCl_2");
 
         assertEquals(expected.n(), actual.n());
-        assertEquals(expected.elements(), actual.elements());
+        assertArrayEquals(expected.elements(), actual.elements());
     }
 
     @Test
@@ -42,7 +43,7 @@ public class ParserTest {
         Substance actual = Parser.parseSubstanceString("HS_4");
 
         assertEquals(expected.n(), actual.n());
-        assertEquals(expected.elements(), actual.elements());
+        assertArrayEquals(expected.elements(), actual.elements());
     }
 
     // Count element tests
