@@ -34,12 +34,12 @@ public record ElementData (
      */
     @Override
     public String toString() {
-        return "ElementData{" +
-                "symbol='" + symbol + '\'' +
-                ", name='" + name + '\'' +
-                ", atomicNumber=" + atomicNumber +
-                ", atomicMass=" + atomicMass +
-                ", elementType=" + elementType +
-                '}';
+        return "ElementData {\n" +
+                "    symbol = '" + symbol + "',\n" +
+                "    name = '" + name + "',\n" +
+                "    atomicNumber = " + atomicNumber + ",\n" +
+                "    atomicMass = " + atomicMass + ",\n" +
+                "    elementType = " + elementType + "\n" +
+                "}";
     }
 }

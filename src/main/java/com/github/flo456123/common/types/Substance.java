@@ -19,9 +19,19 @@ public record Substance(int n, Element... elements) {
      */
     @Override
     public String toString() {
-        return "Substance{" +
-                "n=" + n +
-                ", elements=" + Arrays.toString(elements) +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Substance {\n");
+        sb.append("    n = ").append(n).append(",\n");
+        sb.append("    elements = [\n");
+        for (int i = 0; i < elements.length; i++) {
+            sb.append("        ").append(elements[i].toString().replace("\n", "\n        "));
+            if (i < elements.length - 1) {
+                sb.append(",");
+            }
+            sb.append("\n");
+        }
+        sb.append("    ]\n");
+        sb.append("}");
+        return sb.toString();
     }
 }
