@@ -1,6 +1,6 @@
 # Molecule Master
 
-Welcome to Molecule Master, a library designed to provide Java developers with easy creation of molecular substances.
+Welcome to Molecule Master, a SMILES (Simplified Molecular Input Line Entry System) library designed to provide Java developers with easy creation and manipulation of molecular substances.
 
 ## Installation
 
@@ -76,4 +76,4 @@ The parser in Molecule Master interprets substance strings in the following ways
 
 ## Conclusion
 
-I hope you enjoy using Molecule Master as much as I enjoyed making it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue in my repository.
+I hope you enjoy using Molecule Master as much as I enjoyed making it. Feel free to fork and modify the code to meet your needs. If you encounter any issues or have any suggestions, please let me know by raising an issue under the repository.
