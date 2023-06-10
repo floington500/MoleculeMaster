@@ -1,4 +1,4 @@
-package com.github.flo456123.snakeyaml.config;
+package com.github.flo456123.MoleculeMaster.snakeyaml.config;
 
 import org.yaml.snakeyaml.Yaml;
 

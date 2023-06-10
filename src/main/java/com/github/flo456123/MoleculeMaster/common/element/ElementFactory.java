@@ -1,7 +1,7 @@
-package com.github.flo456123.common.element;
+package com.github.flo456123.MoleculeMaster.common.element;
 
-import com.github.flo456123.common.element.exceptions.UnsupportedElementException;
-import com.github.flo456123.snakeyaml.config.Config;
+import com.github.flo456123.MoleculeMaster.common.element.exceptions.UnsupportedElementException;
+import com.github.flo456123.MoleculeMaster.snakeyaml.config.Config;
 
 import java.io.IOException;
 import java.util.HashMap;

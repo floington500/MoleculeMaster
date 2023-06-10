@@ -1,6 +1,6 @@
-package com.github.flo456123.common.element;
+package com.github.flo456123.MoleculeMaster.common.element;
 
-import com.github.flo456123.common.element.exceptions.ElementLoadingException;
+import com.github.flo456123.MoleculeMaster.common.element.exceptions.ElementLoadingException;
 
 /**
  * The ElementData class represents data about an element in the periodic table.

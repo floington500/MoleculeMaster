@@ -27,8 +27,8 @@ From there, you are free to use the program however you see fit. Make sure to in
 Here's an example of how to use Molecule Master:
 
 ```java
-import com.github.flo456123.common.parser.Parser;
-import com.github.flo456123.common.types.Substance;
+import parser.common.com.github.flo456123.MoleculeMaster.Parser;
+import types.common.com.github.flo456123.MoleculeMaster.Substance;
 
 public class Main {
     public static void main(String[] args) {
