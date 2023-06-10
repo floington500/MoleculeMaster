@@ -7,72 +7,52 @@ Welcome to Molecule Master, a SMILES (Simplified Molecular Input Line Entry Syst
 ### Using JAR from GitHub releases
 1. Go to the Releases page of the Molecule Master repository on GitHub.
 2. Download the latest JAR file attached to the most recent release.
-3. Add the JAR file as an external library or dependency to your project. The process may vary depending on your IDE or build system.
 
 ### Building from Source
 To use Molecule Master by building from the source code, follow these steps:
 
-1. Clone the repository onto your local machine:
-```bash
-git clone https://github.com/flo456123/Molecule-Master.git
-```
+1. Clone the repository onto your local machine: 
+    ```bash
+    git clone https://github.com/flo456123/MoleculeMaster.git
+    ```
+   
 2. Navigate to the root directory of the project:
-```bash
-cd Molecule-Master
-```
+    ```bash
+    cd Molecule-Master
+    ```
+   
+3. Package the application into a JAR using maven:
+    ```bash
+    mvn clean package
+    ```
 
-From there, you are free to use the program however you see fit. Make sure to include the necessary dependencies, such as SnakeYAML, in your build configuration.
+After you complete the steps for either of those methods,
+make sure to include the JAR file as an external library or dependency to your project.
+The process may vary depending on your IDE or build system.
 
 ## Usage
 Here's an example of how to use Molecule Master:
 
 ```java
-import parser.common.com.github.flo456123.MoleculeMaster.Parser;
-import types.common.com.github.flo456123.MoleculeMaster.Substance;
+import com.github.flo456123.MoleculeMaster.common.element.Element;
+import com.github.flo456123.MoleculeMaster.common.element.ElementFactory;
 
 public class Main {
-    public static void main(String[] args) {
-        Substance substance = Parser.parseSubstanceString("H_2O");
+   public static void main(String[] args) {
+      // declare an element object and initialize it using the element factory
+      Element element = ElementFactory.createElement("Na", 5);
 
-        System.out.println(substance);
-    }
+      // now print the data for the element
+      System.out.println(element);
+   }
 }
 ```
 
 When you run the program, you'll get the following output:
 
 ```
-Substance {
-    n = 1.0,
-    elements = [
-        Element {
-            data = ElementData {
-                symbol = 'H',
-                name = 'Hydrogen',
-                atomicNumber = 1,
-                atomicMass = 1.008,
-                elementType = COVALENT
-            },
-            atoms = 2
-        },
-        Element {
-            data = ElementData {
-                symbol = 'O',
-                name = 'Oxygen',
-                atomicNumber = 8,
-                atomicMass = 15.999,
-                elementType = COVALENT
-            },
-            atoms = 1
-        }
-    ]
-}
+Element{data=ElementData{symbol='Na', name='Sodium', atomicNumber=11, atomicMass=22.99, elementType=IONIC}, atoms=5}
 ```
-
-## How it works
-The parser in Molecule Master interprets substance strings in the following ways:
-- The numbers seen before the substances represents the number of moles
-- The numbers seen after underscores represent a subscript for a corresponding molecule
 
 ## Conclusion
 
