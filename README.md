@@ -18,7 +18,7 @@ To use Molecule Master by building from the source code, follow these steps:
    
 2. Navigate to the root directory of the project:
     ```bash
-    cd Molecule-Master
+    cd MoleculeMaster
     ```
    
 3. Package the application into a JAR using maven:
