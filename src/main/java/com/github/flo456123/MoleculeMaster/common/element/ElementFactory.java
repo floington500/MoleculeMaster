@@ -46,7 +46,7 @@ public class ElementFactory {
      * or if the element symbol is not present in the datafile
      */
     public static Element createElement(String symbol, int atoms) {
-        if (symbol.length() < 1 || symbol.length() > 2) {
+        if (symbol.isEmpty() || symbol.length() > 2) {
             throw new UnsupportedElementException("element symbol must be one or two characters");
         }
 
