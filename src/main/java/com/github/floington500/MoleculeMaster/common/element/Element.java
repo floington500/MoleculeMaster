@@ -1,6 +1,6 @@
-package com.github.flo456123.MoleculeMaster.common.element;
+package com.github.floington500.MoleculeMaster.common.element;
 
-import com.github.flo456123.MoleculeMaster.common.element.exceptions.ElementLoadingException;
+import com.github.floington500.MoleculeMaster.common.element.exceptions.ElementLoadingException;
 
 /**
  * The Element class represents an element in the

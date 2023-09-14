@@ -1,9 +1,9 @@
-package com.github.flo456123.MoleculeMaster.common.substance.parser;
+package com.github.floington500.MoleculeMaster.common.substance.parser;
 
-import com.github.flo456123.MoleculeMaster.common.element.Element;
-import com.github.flo456123.MoleculeMaster.common.element.ElementFactory;
-import com.github.flo456123.MoleculeMaster.common.element.exceptions.UnsupportedElementException;
-import com.github.flo456123.MoleculeMaster.common.substance.Substance;
+import com.github.floington500.MoleculeMaster.common.element.Element;
+import com.github.floington500.MoleculeMaster.common.element.ElementFactory;
+import com.github.floington500.MoleculeMaster.common.element.exceptions.UnsupportedElementException;
+import com.github.floington500.MoleculeMaster.common.substance.Substance;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

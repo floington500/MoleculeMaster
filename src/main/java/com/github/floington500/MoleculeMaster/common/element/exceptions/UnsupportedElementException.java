@@ -1,4 +1,4 @@
-package com.github.flo456123.MoleculeMaster.common.element.exceptions;
+package com.github.floington500.MoleculeMaster.common.element.exceptions;
 
 /**
  * This exception is thrown if there is an error on the behalf of the user

@@ -45,9 +45,9 @@ inheritance to create a robust and efficient design.
 Here's an example of how to parse a substance:
 
 ```java
-import com.github.flo456123.MoleculeMaster.common.element.Element;
-import com.github.flo456123.MoleculeMaster.common.substance.Substance;
-import com.github.flo456123.MoleculeMaster.common.substance.parser.SubstanceParser;
+import element.common.com.github.floington500.MoleculeMaster.Element;
+import substance.common.com.github.floington500.MoleculeMaster.Substance;
+import parser.substance.common.com.github.floington500.MoleculeMaster.SubstanceParser;
 
 public class Main {
    public static void main(String[] args) {
@@ -81,8 +81,8 @@ To illustrate flow of data and structure of the program, I will use the factory 
 the parser which acts as a simplified interface, or facade:
 
 ```java
-import com.github.flo456123.MoleculeMaster.common.element.Element;
-import com.github.flo456123.MoleculeMaster.common.element.ElementFactory;
+import element.common.com.github.floington500.MoleculeMaster.Element;
+import element.common.com.github.floington500.MoleculeMaster.ElementFactory;
 
 public class Main {
    public static void main(String[] args) {

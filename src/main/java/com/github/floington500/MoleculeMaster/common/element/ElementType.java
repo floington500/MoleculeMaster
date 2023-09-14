@@ -1,4 +1,4 @@
-package com.github.flo456123.MoleculeMaster.common.element;
+package com.github.floington500.MoleculeMaster.common.element;
 
 /**
  * Enum that represent the two bonds that

@@ -1,6 +1,6 @@
-package com.github.flo456123.MoleculeMaster.common.substance;
+package com.github.floington500.MoleculeMaster.common.substance;
 
-import com.github.flo456123.MoleculeMaster.common.element.Element;
+import com.github.floington500.MoleculeMaster.common.element.Element;
 
 import java.util.Arrays;
 
