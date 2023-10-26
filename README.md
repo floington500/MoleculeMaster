@@ -81,8 +81,8 @@ To illustrate flow of data and structure of the program, I will use the factory 
 the parser which acts as a simplified interface, or facade:
 
 ```java
-import element.common.com.github.floington500.MoleculeMaster.Element;
-import element.common.com.github.floington500.MoleculeMaster.ElementFactory;
+import com.github.floington500.MoleculeMaster.Element;
+import com.github.floington500.MoleculeMaster.ElementFactory;
 
 public class Main {
    public static void main(String[] args) {
