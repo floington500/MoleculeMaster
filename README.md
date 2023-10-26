@@ -45,9 +45,9 @@ inheritance to create a robust and efficient design.
 Here's an example of how to parse a substance:
 
 ```java
-import element.common.com.github.floington500.MoleculeMaster.Element;
-import substance.common.com.github.floington500.MoleculeMaster.Substance;
-import parser.substance.common.com.github.floington500.MoleculeMaster.SubstanceParser;
+import com.github.floington500.MoleculeMaster.Element;
+import com.github.floington500.MoleculeMaster.Substance;
+import com.github.floington500.MoleculeMaster.SubstanceParser;
 
 public class Main {
    public static void main(String[] args) {
